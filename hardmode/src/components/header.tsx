@@ -40,9 +40,9 @@ const Header = () => {
           </div>
         </Link>
         <div className="flex items-center space-x-3">
-        <a href="/prihlaseni" className="account">
+        <Link href="auth" className="account">
             <img src="https://api.enchant.cz/head/64/MHF_Steve"/>
-        <div className="nick">Přihlásit se</div></a>
+        <div className="nick">Přihlásit se</div></Link>
           </div>
         {/* {session && (
           <div className="flex items-center space-x-3">

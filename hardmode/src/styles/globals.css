@@ -4,12 +4,38 @@
 
 @font-face {
     font-family: "MinecraftFont";
-    src: url("../../public/fonts/MinecraftFont.ttf");
+    src: url("../../public/fonts/MinecraftFont.ttf") format("ttf");
   }
 .FontTitle {
-    font-family:MinecraftFont, sans-serif;
+    font-family:"MinecraftFont", sans-serif;
 }
 
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Variable.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+:root {
+    --c-input-bg: #140c14;
+    --c-input-border: #292429;
+    --c-input-border-active: #e93d4288;
+    --c-input-border-error: #f09892;
+    --c-input-label: #c4aeae;
+    --c-input-label-active: #e93d42;
+    --c-input-label-error: #e7645a
+}
+
+.Nick {
+  color: white;
+}
+
+.Password {
+  color: white;
+}
 body {
     background: #130907;
     color: #f8fbf9;
@@ -201,3 +227,115 @@ body {
     height: 35px;
     margin: 5px
 }
+
+
+.inp :is(input,textarea) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: var(--c-input-bg);
+    border: 2px solid var(--c-input-border);
+    border-radius: 0.375rem;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px #0000000d;
+    color: var(--c-input);
+    display: block;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 500;
+    min-height: 50px;
+    padding: 2px 12px 0;
+    transition: border-color .15s ease;
+    width: 100%;
+}
+
+.inp label {
+    background: var(--c-input-bg);
+    border-radius: 10px;
+    color: var(--c-input-label);
+    font-size: 1.1rem;
+    font-weight: 700;
+    left: 7px;
+    line-height: 1;
+    padding: 0 6px;
+    pointer-events: none;
+    position: absolute;
+    top: 17px;
+    transform: translateZ(0);
+    transform-origin: 0 0;
+    transition: all .2s ease;
+}
+
+.inp {
+    margin: 15px 0;
+    max-width: 300px;
+    position: relative;
+    width: 100%;
+}
+
+.inp.fwidth {
+    max-width: 100%;
+}
+
+.inp textarea {
+    height: 100px;
+    margin-bottom: 0!important;
+    max-width: 100%;
+    padding: 10px 12px
+}
+
+.inp :is(:is(input,textarea):not(:placeholder-shown)+label,:is(input,textarea):not(:-ms-input-placeholder)+label,:is(input,textarea):not(:-moz-placeholder-shown)+label) {
+    color: var(--c-input-label);
+    transform: translate3d(0,-23px,0) scale(.9)
+}
+
+.inp :is(input,textarea):focus {
+    border-color: var(--c-input-border-active);
+    outline: none
+}
+
+.inp :is(input,textarea):focus+label {
+    color: var(--c-input-label-active);
+    transform: translate3d(0,-23px,0) scale(.9)
+}
+
+.inp.inp-error :is(input,textarea) {
+    border-color: var(--c-input-border-error)
+}
+
+.inp.inp-error label {
+    color: var(--c-input-label-error)!important
+}
+
+.inp .error-text {
+    color: var(--c-input-label-error)
+}
+
+.inp .error-text,.input-info {
+    font-size: 17px;
+    margin-top: 5px;
+    text-align: left
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

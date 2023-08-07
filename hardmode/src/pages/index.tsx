@@ -11,19 +11,13 @@ export default function Home() {
     const isEvent = props.isEvent;
     if (isEvent === false) {
       return <div className="inner home-grid ">
+            <img className="logo" src="/Hardmode-logo.png"/>
         <div>
-        <Up>
-          <h1 className="text-8xl font-extrabold fontTitle">Enchant</h1>
-          </Up>
+          <h1 className="text-8xl font-extrabold title">Enchant</h1>
           <a href="/prihlaska" className="">
-          <Up>
             <button className="prihlaska-btn">Přihláška</button>
-            </Up>
             </a>
             </div>
-            <Up>
-            <img src="/Hardmode-logo.png"/>
-            </Up>
     </div>
     }
     return <div className="inner ">
