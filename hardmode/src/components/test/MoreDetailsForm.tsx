@@ -14,7 +14,7 @@ export default function MoreDetailsForm({
   return (
     <>
       <Typography variant="h6" gutterBottom>
-        More Details
+      Kolik je ti let?
       </Typography>
       <Grid container spacing={3} sx={{ mt: -1 }}>
         <Grid item xs={12} sm={6}>

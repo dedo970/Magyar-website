@@ -200,29 +200,13 @@ export default function FormScreen() {
 
   return (
     <>
+    <div className="flex items-center pt-4 top-2/4 h-screen">
       <Container component="main" maxWidth="md" sx={{ p: 2 }}>
-        <Stack direction="row" alignItems="end">
-          <Typography component="h1" variant="h4">
-            Create Profile
-          </Typography>
-          <Button
-            component={ClientLink}
-            to="/"
-            variant="text"
-            sx={{ marginLeft: "auto", textTransform: "none" }}
-          >
-            Go To Home
-          </Button>
-        </Stack>
-        <Paper variant="elevation" elevation={3} sx={{ mt: 2, p: 3 }}>
           {activeStep === steps.length ? (
             isSuccess ? (
-              <CreateSuccess
-                viewLink={`/view/${data?._id || ""}`}
-                homeLink="/"
-              />
-            ) : (
               <Loading />
+            ) : (
+              ""
             )
           ) : (
             <React.Fragment>
@@ -230,9 +214,9 @@ export default function FormScreen() {
               {!isSuccess && (
                 <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
                   {activeStep !== 0 && (
-                    <Button onClick={handleBack} sx={{ mt: 3, ml: 1 }}>
+                    <button onClick={handleBack}>
                       Back
-                    </Button>
+                    </button>
                   )}
                   <Button
                     variant="contained"
@@ -245,8 +229,8 @@ export default function FormScreen() {
               )}
             </React.Fragment>
           )}
-        </Paper>
       </Container>
+      </div>
     </>
   );
 }
