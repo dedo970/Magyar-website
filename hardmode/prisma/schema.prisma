@@ -69,22 +69,30 @@ model VerificationToken {
 
 model Hackathon {
     id             String          @id @default(cuid())
-    Q1 String
-    Q2 String
-    Q3 String
-    Q4 String
-    Q5 String
-    Q6 String
-    Q7 String
-    Q8 String
-    Q9 String
-    Q10 String
+    firstName String
+    lastName String
+    description String
+    location String
+    team String
     @@map(name: "hackathons")
 }
 
 model Form {
     id             String          @id @default(cuid())
-    number String
-    question String
+    firstName String
+    lastName String
+    description String
+    location String
+    team String
     @@map(name: "Form")
+}
+
+model Profile {
+    id             String          @id @default(cuid())
+    firstName String
+    lastName String
+    job String
+    city String
+    country String
+    @@map(name: "profiles")
 }

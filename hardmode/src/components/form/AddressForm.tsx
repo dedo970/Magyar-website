@@ -2,7 +2,6 @@ import { FormWrapper } from "./FormWrapper"
 
 type AddressData = {
   street: string
-  city: string
   state: string
   zip: string
 }
@@ -13,7 +12,6 @@ type AddressFormProps = AddressData & {
 
 export function AddressForm({
   street,
-  city,
   state,
   zip,
   updateFields,
@@ -27,13 +25,6 @@ export function AddressForm({
         type="text"
         value={street}
         onChange={e => updateFields({ street: e.target.value })}
-      />
-      <label>City</label>
-      <input
-        required
-        type="text"
-        value={city}
-        onChange={e => updateFields({ city: e.target.value })}
       />
       <label>State</label>
       <input
