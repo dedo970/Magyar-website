@@ -26,18 +26,19 @@ export default function BasicInfoForm({
   return (
     <>
       <Typography variant="h6" gutterBottom>
-      Začneme od začátku. Jakou přezdívku používáš v Minecraftu?
+      Hráči jsou na našem Discord serveru, abychom na sebe měli kontakt.
+	Připoj se tam taky a níže napiš, jak se tam jmenuješ. (např. Lemon_CZE#1234)
       </Typography>
       <Grid container spacing={3} sx={{ mt: -1 }}>
         <Grid item xs={12} sm={6}>
           <TextField
             required
-            label="First name"
+            label="Last name"
             fullWidth
             variant="outlined"
-            error={error.firstName}
-            value={userInfo.firstName}
-            onChange={(e) => handleChange("firstName", e.target.value)}
+            error={error.lastName}
+            value={userInfo.lastName}
+            onChange={(e) => handleChange("lastName", e.target.value)}
           />
         </Grid>
         </Grid>

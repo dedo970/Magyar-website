@@ -14,6 +14,9 @@ import {
 } from "@mui/material";
 
 import BasicInfoForm from "~/components/test/BasicInfoForm";
+import Question2 from "~/components/test/Question2";
+import Question3 from "~/components/test/Question3";
+import Question4 from "~/components/test/Question4";
 import MoreDetailsForm from "~/components/test/MoreDetailsForm";
 import ProfileView from "~/components/test/ProfileView";
 import { toast } from "sonner";
@@ -28,7 +31,7 @@ import router, { useRouter } from "next/router";
 import { useState } from "react";
 import { nanoid } from "nanoid";
 
-const steps = ["Basic Info", "More details", "Review"];
+const steps = ["Basic Info","Question2","Question3","Question4", "More details", "Review"];
 let dataId = nanoid(6);
 
 
@@ -41,11 +44,17 @@ const checkStepValidity = (
   const newError: Error = {} as Error;
   if (step === 0) {
     newError.firstName = !userInfo.firstName;
-    newError.lastName = !userInfo.lastName;
   }
   if (step === 1) {
-    newError.description = !userInfo.description;
+    newError.lastName = !userInfo.lastName;
+  }
+  if (step === 2) {
     newError.location = !userInfo.location;
+  }
+  if (step === 3) {
+    newError.description = !userInfo.description;
+  }
+  if (step === 4) {
     newError.team = !userInfo.team;
   }
   setError({ ...error, ...newError });
@@ -112,8 +121,11 @@ export default function FormScreen() {
 
   const handleNext = () => {
     if (activeStep === 0) setDirty([true, dirty[1] as boolean]);
-    if (activeStep === 1) setDirty([dirty[0] as boolean, true]);
-    if (activeStep === 2) {
+    if (activeStep === 1) setDirty([true, dirty[1] as boolean]);
+    if (activeStep === 2) setDirty([true, dirty[1] as boolean]);
+    if (activeStep === 3) setDirty([true, dirty[1] as boolean]);
+    if (activeStep === 4) setDirty([dirty[0] as boolean, true]);
+    if (activeStep === 5) {
       handleFinish();
     }
     if (!checkStepValidity(userInfo, activeStep, error, setError)) return;
@@ -139,7 +151,7 @@ export default function FormScreen() {
         );
       case 1:
         return (
-          <MoreDetailsForm
+          <Question2
             userInfo={userInfo}
             handleChange={(field: Field, value: unknown) =>
               handleFormInputChange(field, value, 1)
@@ -147,9 +159,39 @@ export default function FormScreen() {
             error={error}
           />
         );
-      case 2:
+        case 2:
+          return (
+            <Question3
+              userInfo={userInfo}
+              handleChange={(field: Field, value: unknown) =>
+                handleFormInputChange(field, value, 1)
+              }
+              error={error}
+            />
+          );
+        case 3:
+          return (
+            <Question4
+              userInfo={userInfo}
+              handleChange={(field: Field, value: unknown) =>
+                handleFormInputChange(field, value, 1)
+              }
+              error={error}
+            />
+          );
+        case 4:
+          return (
+            <MoreDetailsForm
+              userInfo={userInfo}
+              handleChange={(field: Field, value: unknown) =>
+                handleFormInputChange(field, value, 1)
+              }
+              error={error}
+            />
+          );
+      case 5:
         return <ProfileView userInfo={userInfo} sx={{ mt: 2 }} />;
-      case 3:
+      case 6:
         return isSuccess ? <div>Success</div> : <div>Saving ...</div>;
       default:
         throw new Error("Unknown step");

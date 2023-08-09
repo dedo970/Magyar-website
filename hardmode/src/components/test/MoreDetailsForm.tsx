@@ -28,30 +28,6 @@ export default function MoreDetailsForm({
             onChange={(e) => handleChange("team", e.target.value)}
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            label="Location"
-            fullWidth
-            variant="outlined"
-            error={error.location}
-            value={userInfo.location}
-            onChange={(e) => handleChange("location", e.target.value)}
-          />
-        </Grid>
-        <Grid item xs={12} sm={12}>
-          <TextField
-            required
-            label="Description"
-            fullWidth
-            multiline
-            minRows={3}
-            variant="outlined"
-            error={error.description}
-            value={userInfo.description}
-            onChange={(e) => handleChange("description", e.target.value)}
-          />
-        </Grid>
       </Grid>
     </>
   );

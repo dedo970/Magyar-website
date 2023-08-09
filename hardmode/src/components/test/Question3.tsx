@@ -1,20 +1,8 @@
 import * as React from "react";
-import {
-  FormControl,
-  RadioGroup,
-  Radio,
-  Grid,
-  Typography,
-  TextField,
-  FormControlLabel,
-  FormLabel,
-} from "@mui/material";
-
-
-
+import { Grid, Typography, TextField } from "@mui/material";
 import type { UserInfo, Field, Error } from "~/types/hackathon.type";
 
-export default function BasicInfoForm({
+export default function MoreDetailsForm({
   userInfo,
   handleChange,
   error,
@@ -26,21 +14,21 @@ export default function BasicInfoForm({
   return (
     <>
       <Typography variant="h6" gutterBottom>
-      Začneme od začátku. Jakou přezdívku používáš v Minecraftu?
+        More Details
       </Typography>
       <Grid container spacing={3} sx={{ mt: -1 }}>
         <Grid item xs={12} sm={6}>
           <TextField
             required
-            label="First name"
+            label="Location"
             fullWidth
             variant="outlined"
-            error={error.firstName}
-            value={userInfo.firstName}
-            onChange={(e) => handleChange("firstName", e.target.value)}
+            error={error.location}
+            value={userInfo.location}
+            onChange={(e) => handleChange("location", e.target.value)}
           />
         </Grid>
-        </Grid>
-        </>
-  )
+      </Grid>
+    </>
+  );
 }
