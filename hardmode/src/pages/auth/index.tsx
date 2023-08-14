@@ -7,23 +7,35 @@ import { Github } from "~/ui/icons";
 import { toast } from "sonner";
 import Up from "~/animations/up";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
+import React, { useEffect } from "react";
+import Link from 'next/link';
+import { FormEvent } from 'react';
+import { api } from "../../utils/api";
+import LoginForm from "~/components/LoginForm";
+import type { GetServerSideProps, NextPage } from "next";
 
-const Auth = () => {
-  const [loading, setLoading] = useState(false);
-  const userSession = useSession();
-  console.log("session: ...", userSession ); 
+import { getServerAuthSession } from "~/server/auth";
 
-  const { data: sessionData } = useSession();
-  const handleLogin = async (provider: string) => {
-    setLoading(true);
-    try {
-      await signIn(provider, {
-        callbackUrl: `/`,
-      });
-    } catch (error) {
-      toast.error("Unable to log in. Please try again later.");
-      setLoading(false);
-    }
+type TForm = {
+  username: string;
+  password: string;
+};
+
+const Auth: React.FC = () => {
+  const [userName, setUserName] = useState<string>("");
+  const [userPassword, setPassword] = useState<string>("");
+  const hello2 = api.example.hello2.useMutation();
+  const signIn = async (e: React.FormEvent) => {
+    
+    e.preventDefault();
+    console.log(e);
+    if (!userName || !userPassword) return;
+    const result = await hello2.mutateAsync({
+      username: userName,
+      password: userPassword,
+    });
+    console.log(result);
   };
 
   return (
@@ -32,46 +44,42 @@ const Auth = () => {
         <title>Auth - Project Hackathon</title>
       </Head>
       <div className="flex h-screen flex-col items-center justify-center">
-        <Up>
-          <h1 className="mb-4 text-2xl font-medium">
-            {loading ? "Logging in..." : ""}
-          </h1>
-        </Up>
-        <Up delay={0.2}>
-        <form className="max-width: 350px; margin: auto;">
+        {/* <Up delay={0.2}>
+        <form className="max-width: 350px; margin: auto;" onSubmit={(e) => signIn(e)}>
         <h2 className="mb-2 text-gradient">Přihlášení</h2>
         <p className="mt-2 text-blob">Přihlas se ke svému Enchant účtu.</p>
         <div className="inp fwidth">
-            <input className="Nick" placeholder=" " type="text"/>
+            <input  className="Nick" placeholder=" " type="text" onChange={(e) => setUserName(e.target.value)}/>
                 <label>Herní nick</label></div>
                 <div className="inp fwidth">
-                    <input className="Password" placeholder=" " type="password"/>
+                    <input className="Password" placeholder=" " type="password"
+                     onChange={(e) => setPassword(e.target.value)}/>
                     <label>Heslo</label></div>
-                    <input className="btn" type="submit" value="Přihlásit se" onClick={AuthShowcase}/>
+                    <input className="btn" type="submit" value="Přihlásit se"/>
 
                     </form>
-        </Up>
-        <AuthShowcase/>
+        </Up> */}
+        <LoginForm/>
       </div>
     </>
   );
 };
-const AuthShowcase: React.FC = () => {
-  const { data: sessionData } = useSession();
-  const userSession = useSession();
-  console.log("session: ...", userSession); 
-  return (
-    <div className="flex flex-col items-center justify-center gap-4">
-      <p className="text-center text-2xl text-white">
-        {sessionData && <span>Logged in as {sessionData.user?.name}</span>}
-      </p>
-      <button
-        className="rounded-full bg-white/10 px-10 py-3 font-semibold text-white no-underline transition hover:bg-white/20"
-        onClick={sessionData ? () => void signOut() : () => void signIn()}
-      >
-        {sessionData ? "Sign out" : "Sign in"}
-      </button>
-    </div>
-  );
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const session = await getServerAuthSession({
+    req: context.req,
+    res: context.res,
+  });
+
+  if (session) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+
+  return { props: {} };
 };
 export default Auth;

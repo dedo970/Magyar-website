@@ -1,4 +1,4 @@
-import { signOut, useSession } from "next-auth/react";
+import { signOut, useSession, signIn } from "next-auth/react";
 import Image from "next/image";
 
 import Up from "~/animations/up";
@@ -6,8 +6,7 @@ import { Button, Link } from "~/ui";
 import { toast } from "sonner";
 
 const Header = () => {
-  const { data: session } = useSession();
-
+  const session = useSession();
   const handleLogout = async () => {
     try {
       await signOut({
@@ -44,28 +43,21 @@ const Header = () => {
             <img src="https://api.enchant.cz/head/64/MHF_Steve"/>
         <div className="nick">Přihlásit se</div></Link>
           </div>
-        {/* {session && (
-          <div className="flex items-center space-x-3">
-            <Up>
-              <div className="flex items-center space-x-3">
-                <Image
-                  src={session.user.image}
-                  width={24}
-                  height={24}
-                  className="rounded-full"
-                  alt={session.user.name}
-                />
-                <p className="hidden md:block">{session.user.name}</p>
-              </div>
-            </Up>
+          <button
+            onClick={() => signIn()}
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-bl from-neutral-100 to-neutral-50 text-neutral-700 drop-shadow-lg"
+          >
+          </button>
+           {session.status === "authenticated" && (
+            <div className="flex items-center space-x-3">
             <Up delay={0.2}>
               <div className="flex items-center space-x-3">
                 <span className="text-gray-400">|</span>
-                <Button onClick={handleLogout}>Sign out</Button>
+                <Button onClick={() => signOut()}>Sign out</Button>
               </div>
             </Up>
           </div>
-        )} */}
+           )}
       </div>
       </Up>
     </header>
