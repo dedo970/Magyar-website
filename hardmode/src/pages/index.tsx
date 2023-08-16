@@ -4,6 +4,21 @@ import Link from "next/link";
 import { useState } from "react";
 import { api } from "~/utils/api";
 import Up from "~/animations/up";
+
+
+
+import {
+  ClientRoute,
+  ClientRouter,
+  ClientRouterProvider,
+} from "../utils/client-router";
+
+import DashboardScreen from "~/screens/DashboardScreen";
+import ProfileViewScreen from "~/screens/ProfileViewScreen";
+import Loading from "~/components/test/Loading";
+
+
+
 export default function Home() {
 
   function Event(props) {
@@ -53,7 +68,12 @@ export default function Home() {
     </div>
     <div className="inner text-center">
         <h1>Heloodsdasdoasoo</h1>
-
+        <ClientRouterProvider>
+        <ClientRouter whileLoading={<Loading />}>
+          <ClientRoute path="/" Component={DashboardScreen} />
+          <ClientRoute path="/view/:id" Component={ProfileViewScreen} />
+        </ClientRouter>
+      </ClientRouterProvider>
       </div>
     </div>
     </>

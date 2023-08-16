@@ -4,6 +4,7 @@ import Image from "next/image";
 import Up from "~/animations/up";
 import { Button, Link } from "~/ui";
 import { toast } from "sonner";
+import { ClientRoute } from "~/utils/client-router";
 
 const Header = () => {
   const session = useSession();
@@ -36,27 +37,32 @@ const Header = () => {
             <p className="hidden md:block">Rules</p>
             <p className="hidden md:block">Wiki</p>
             <p className="hidden md:block">Members</p>
+            {session.status === "authenticated" && (
+            <Link href="/formlist">
+            <p className="hidden md:block">Members</p>
+            </Link>
+            )}
           </div>
         </Link>
+        {session.status !== "authenticated" && (
         <div className="flex items-center space-x-3">
-        <Link href="auth" className="account">
-            <img src="https://api.enchant.cz/head/64/MHF_Steve"/>
-        <div className="nick">Přihlásit se</div></Link>
-          </div>
-          <button
-            onClick={() => signIn()}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-bl from-neutral-100 to-neutral-50 text-neutral-700 drop-shadow-lg"
-          >
-          </button>
-           {session.status === "authenticated" && (
+              <Link href="auth" className="account">
+                <img src="https://api.enchant.cz/head/64/MHF_Steve" />
+                <div className="nick">Přihlásit se</div></Link>
+            </div>
+        )}
+        {session.status === "authenticated" && (
+        <>
             <div className="flex items-center space-x-3">
-            <Up delay={0.2}>
-              <div className="flex items-center space-x-3">
-                <span className="text-gray-400">|</span>
-                <Button onClick={() => signOut()}>Sign out</Button>
+                <Up delay={0.2}>
+                  <div className="flex items-center space-x-3 ">
+                  <img src="https://api.enchant.cz/head/64/MHF_Steve" className="rounded-full h-9" />
+                    <span className="text-gray-400">|</span>
+                    <Button onClick={() => signOut()}>Sign out</Button>
+                  </div>
+                </Up>
               </div>
-            </Up>
-          </div>
+              </>
            )}
       </div>
       </Up>
