@@ -28,7 +28,7 @@ export default function Home() {
             <img className="logo" src="/Hardmode-logo.png"/>
         <div>
           <h1 className="text-8xl font-extrabold title">Enchant</h1>
-          <a href="/prihlaska" className="">
+          <a href="/form" className="">
             <button className="prihlaska-btn">Přihláška</button>
             </a>
             </div>
