@@ -68,7 +68,9 @@ export default function clenovia() {
             {data.map((item) => 
             <div className=" bg-slate-600 grid grid-cols-2 p-3 rounded-md shadow">
             {/* <img src={`https://cravatar.eu/avatar/${Chleba_}/64.png`} /> */}
-            <img className="rounded-md shadow" loading="lazy" src="https://cravatar.eu/avatar/Chleba_/64.png" />
+            {/* <img className="rounded-md shadow" loading="lazy" src="https://cravatar.eu/avatar/Chleba_/64.png" /> */}
+            <img className="rounded-md shadow" loading="lazy" src={`https://minotar.net/helm/${item.uiid}/64.png`} />
+            
             <div className="text-right">
             <h1 className="text-2xl font-bold">{item.nick}</h1>
             <h1 className="text-xl text-slate-300">{item.date}</h1>
