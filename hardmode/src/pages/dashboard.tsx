@@ -19,7 +19,15 @@ const Dashboard: NextPage = () => {
         <div className="mt-40 radius flex flex-col items-center gap-2 border p-4">
           <h1 className="text-lg">Dashboard - Protected</h1>
           <p>{JSON.stringify(session)}</p>
+          <p>{session.data?.user?.email}</p>
+                    <p>{session.data?.user?.email}</p>
           <p>{secret.data ? secret.data : "Loading tRPC query..."}</p>
+
+          <div className="flex items-center space-x-3">
+              <div className="account">
+                <img src={`https://cravatar.eu/avatar/${session.data?.user?.email}/64.png`} />
+</div>
+            </div>
           <button
             onClick={() => signOut()}
             className="rounded border py-1 px-4"

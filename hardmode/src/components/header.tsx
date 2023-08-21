@@ -9,8 +9,8 @@ import { useScrollPosition } from "~/hooks/useScrollPosition";
 import { Fragment } from 'react'
 const navigation = [
   { name: 'Wiki', href: '/wiki', current: false },
-  { name: 'Pravidlá', href: '', current: false },
-  { name: 'Členovia', href: '#', current: false },
+  { name: 'Pravidlá', href: '/pravidla', current: false },
+  { name: 'Členovia', href: '/clenovia', current: false },
   { name: 'Calendar', href: '#', current: false },
 ]
 
@@ -57,7 +57,7 @@ const Header = () => {
                 <a href="/">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="h-8 w-auto"
+                    className="h-9 w-auto"
                     src="/Hardmode-logo.png"
                     alt="Logo"
                   />
@@ -101,7 +101,7 @@ const Header = () => {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-9 w-9 rounded-full"
-                        src="https://api.enchant.cz/head/64/MHF_Steve"
+                        src={`https://cravatar.eu/avatar/${session.data?.user?.email}/64.png`}
                         alt=""
                       />
                     </Menu.Button>
@@ -123,16 +123,6 @@ const Header = () => {
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Your Profile
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Settings
                           </a>
                         )}
                       </Menu.Item>
