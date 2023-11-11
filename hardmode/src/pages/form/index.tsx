@@ -190,7 +190,7 @@ export default function FormScreen() {
             />
           );
       case 5:
-        return <ProfileView userInfo={userInfo} sx={{ mt: 2 }} />;
+        return <><ProfileView userInfo={userInfo} sx={{ mt: 2 }} /><h1>hello</h1></>;
       case 6:
         return isSuccess ? <div>Success</div> : <div>Saving ...</div>;
       default:
@@ -214,17 +214,18 @@ export default function FormScreen() {
               {!isSuccess && (
                 <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
                   {activeStep !== 0 && (
-                    <button onClick={handleBack}>
+                    <button 
+                    className="prihlaska-kkt mr-2"
+                    onClick={handleBack}>
                       Back
                     </button>
                   )}
-                  <Button
-                    variant="contained"
+                  <button
+                    className="prihlaska-kkt"
                     onClick={handleNext}
-                    sx={{ mt: 3, ml: 1 }}
                   >
                     {activeStep === steps.length - 1 ? "Finish" : "Next"}
-                  </Button>
+                  </button>
                 </Box>
               )}
             </React.Fragment>

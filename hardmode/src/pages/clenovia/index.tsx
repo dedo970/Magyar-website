@@ -52,15 +52,10 @@ export default function clenovia() {
           
     {/* // ak je event tak daj true */}
 
-    <div className="inner home-grid ">
-            <img className="logo" src="/Hardmode-logo.png"/>
-        <div>
-          <h1 className="text-8xl font-extrabold title">Enchant</h1>
-          <a href="/form" className="">
-            <button className="prihlaska-btn">Přihláška</button>
-            </a>
+    <div className="inner text-center">
+          <h1 className="text-5xl font-extrabold">Členovia</h1>
+          <p className="my-4 text-xl font-bold desc">Seznam všech členů serveru</p>
             </div>
-    </div>
         </div>
         {loading ? 
         <div className="page py-12 grid lg:grid-cols-3 gap-4 max-w-screen-xl mx-auto md:grid-cols-2 sm:grid-cols-1 px-12">

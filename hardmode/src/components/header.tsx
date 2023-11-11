@@ -11,7 +11,6 @@ const navigation = [
   { name: 'Wiki', href: '/wiki', current: false },
   { name: 'Pravidlá', href: '/pravidla', current: false },
   { name: 'Členovia', href: '/clenovia', current: false },
-  { name: 'Calendar', href: '#', current: false },
 ]
 
 
@@ -82,6 +81,9 @@ const Header = () => {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <a>
+<img className="h-9 w-9" style={{color:"#e3e3e3"}} src="/discord.svg" alt="discord logo" />
+                </a>
                             {session.status !== "authenticated" && (
         <div className="flex items-center space-x-3">
               <Link href="auth" className="account">
@@ -91,7 +93,7 @@ const Header = () => {
         )}
 
                 {/* Profile dropdown */}
-                        {session.status === "authenticated" && (
+                      {session.status === "authenticated" && (
         <>
                 <Menu as="div" className="relative ml-3">
                   <div>
@@ -126,6 +128,28 @@ const Header = () => {
                           </a>
                         )}
                       </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/dashboard"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            Mapa
+                          </a>
+                        )}
+                      </Menu.Item>
+                      {session.data.user?.role === "Admin" && (
+                                            <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/formlists"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            formlist
+                          </a>
+                        )}
+                      </Menu.Item>
+                      )}
                       <Menu.Item>
                         {({ active }) => (
                           <a

@@ -36,28 +36,28 @@ function Blog ({ posts }) {
     <div className="head  w-full">
       <div className="top-bg">
       </div>
-      <div className="flex justify-center ">
+      <div className="flex justify-center text-center ">
         {/* <img className="logo" src="/Hardmode-logo.png" /> */}
         <div>
           <h1 className="text-5xl font-extrabold">Wiki</h1>
+          <p className="my-4 text-xl font-bold desc">Návody, rady a tipy</p>
         </div>
       </div>
-    </div><div className="grid grid-cols-1 md:grid-cols-3 lg-grid-cols-4 md:p-0 mt-8">
-        {posts.map(({ slug, frontmatter }) => (
-          <div key={slug} className="border border-gray-200 m-2 rounded-xl shadow-lg overflow-hidden flex flex-col">
-            <Link href={`/post/${slug}`} legacyBehavior>
-              <a>
-                <Image
-                  width={650}
-                  height={340}
-                  alt={frontmatter.title}
-                  src={`/${frontmatter.socialImage}`} />
+    </div>
 
-                <h1 className="p-4">{frontmatter.title}</h1>
+    <div className='page'>
+    <div className="inner wiki-grid">
+        {posts.map(({ slug, frontmatter }) => (
+          <div key={slug} className="">
+            <Link href={`/post/${slug}`} legacyBehavior>
+              <a className=''>
+                <h1 className="title">{frontmatter.title}</h1>
+                <p className='desc'>{frontmatter.metaDesc}</p>
               </a>
             </Link>
           </div>
         ))}
+      </div>
       </div>
       </>
   );

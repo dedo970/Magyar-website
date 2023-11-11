@@ -29,7 +29,7 @@ export default function Home() {
         <div>
           <h1 className="text-8xl font-extrabold title">Enchant</h1>
           <a href="/form" className="">
-            <button className="prihlaska-btn">Přihláška</button>
+            <button className=" prihlaska-kkt">Přihláška</button>
             </a>
             </div>
     </div>
@@ -68,12 +68,6 @@ export default function Home() {
     </div>
     <div className="inner text-center">
         <h1>Heloodsdasdoasoo</h1>
-        <ClientRouterProvider>
-        <ClientRouter whileLoading={<Loading />}>
-          <ClientRoute path="/" Component={DashboardScreen} />
-          <ClientRoute path="/view/:id" Component={ProfileViewScreen} />
-        </ClientRouter>
-      </ClientRouterProvider>
       </div>
     </div>
     </>

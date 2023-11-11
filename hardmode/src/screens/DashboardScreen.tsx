@@ -18,14 +18,6 @@ export default function DashboardScreen() {
         <Typography component="h1" variant="h4">
           Profile List
         </Typography>
-        <Button
-          component={ClientLink}
-          to="/form"
-          variant="contained"
-          sx={{ marginLeft: "auto", textTransform: "none" }}
-        >
-          Add Profile
-        </Button>
       </Stack>
       {isLoading ? (
         <Loading />

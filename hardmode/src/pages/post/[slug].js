@@ -58,7 +58,7 @@ function Post ({ frontmatter, content }) {
           <div>
               <h1 className="text-5xl font-extrabold">{frontmatter.title}</h1>
               <a href="/wiki" className="flex justify-center pt-6">
-                  <button className="prihlaska-btn text-center">back to wiki</button>
+                  <button className="prihlaska-kkt text-center">back to wiki</button>
               </a>
           </div>
       </div>

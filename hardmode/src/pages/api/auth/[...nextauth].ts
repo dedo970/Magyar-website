@@ -12,13 +12,18 @@ export const authOptions: NextAuthOptions = {
       if (user) {
         token.id = user.id;
         token.email = user.email;
+        token.uiid = user.uiid;
+        token.role = user.role;
+        
       }
 
       return token;
     },
-    session({ session, token }) {
+   async session({ session, token }) {
       if (token && session.user) {
         session.user.id = token.id as string;
+        session.user.uiid = token.uiid;
+        session.user.role = token.role;
       }
 
       return session;
@@ -65,6 +70,8 @@ export const authOptions: NextAuthOptions = {
           id: user.id,
           email: user.email,
           username: user.username,
+          uiid: user.uiid,
+          role: user.role,
         };
       },
     }),
