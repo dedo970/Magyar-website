@@ -18,9 +18,10 @@ export default function MoreDetailsForm({
       </Typography>
       <Grid container spacing={3} sx={{ mt: -1 }}>
         <Grid item xs={12} sm={6}>
-          <TextField
+          <input
             required
-            label="Team"
+            placeholder="Napíš svoj vek"
+            className="bg-transparent border-0 outline-none text-2xl w-full"
             fullWidth
             variant="outlined"
             error={error.team}

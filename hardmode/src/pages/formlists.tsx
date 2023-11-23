@@ -18,6 +18,8 @@ import ProfileViewScreen from "~/screens/ProfileViewScreen";
 import ProfileView from "~/components/ProfileView";
 import ProfileList from "~/components/ProfileList";
 import FormList from "~/components/ProfileList";
+import Header from "~/components/header";
+import Footer from "~/components/footer";
 
 const formlists: NextPage = () => {
   const session = useSession();
@@ -31,17 +33,13 @@ const formlists: NextPage = () => {
       </Head>
         {session.data?.user.role === "Admin" && (
         <>
-        {/* <ClientRouterProvider>
-                  <ClientRouter whileLoading={<Loading />}>
-                      <ClientRoute path="/formlists" Component={DashboardScreen} />
-                      <ClientRoute path="/view/id" Component={ProfileViewScreen} />
-                  </ClientRouter>
-              </ClientRouterProvider> */}
+<Header/>
               <div className=" flex justify-center h-screen">
               <div className="my-auto text-center flex justify-center">
               <ProfileList/>
               </div>
               </div>
+              <Footer/>
               </>
           )}
     </>

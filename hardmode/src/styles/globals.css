@@ -772,6 +772,292 @@ body {
 
 
 
+#root{
+    height: 100vh;
+    width: 100vw;
+}
+
+.mainHeader{
+    text-align: center;
+    font-family: 'Minecraft', sans-serif;
+    font-size: 50px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    margin-top: 0;
+    margin-bottom: 1;
+    /* border: 5px solid #00AA00; */
+}
+
+.header{
+    text-align: center;
+    font-family: 'Minecraft', sans-serif;
+    font-size: 35px;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    background-color: #00AA00;
+    border: none;
+}
+
+
+
+.emptyCraftingTable{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.itemSlot{
+    background: #8B8B8B no-repeat center center / 128px 128px;
+    border: 2px solid;
+    border-color: #373737 #FFF #FFF #373737;
+    width: 45px;
+    height: 45px;
+    margin: 10px;
+}
+
+
+.centerCraftingTableBasic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -442px;
+}
+
+.centerItemsBasic{
+    position: relative;
+    display: block;
+    margin: -2px;
+    padding: 2px;
+    width: 260px;
+    height: 512px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerCraftingTableTools{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -377px;
+}
+
+.centerItemsTools{
+    position: relative;
+    display: block;
+    margin: -2px;
+    padding: 2px;
+    width: 340px;
+    height: 512px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerCraftingTableBlocks{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -507px;
+}
+
+.centerItemsBlocks{
+    position: relative;
+    display: block;
+    margin: -2px;
+    padding: 2px;
+    width: 1024px;
+    height: 512px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerCraftingTableOther{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -442px;
+}
+
+.centerItemsOther{
+    position: relative;
+    display: block;
+    margin: -2px;
+    padding: 2px;
+    width: 1024px;
+    height: 512px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerCraftingTableDefence{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -442px;
+}
+
+.centerItemsDefence{
+    position: relative;
+    display: block;
+    margin: -2px;
+    padding: 2px;
+    width: 260px;
+    height: 512px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerCraftingTableBrewing{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -377px;
+}
+
+.centerItemsBrewing{
+    position: relative;
+    display: block;
+    margin: -2px;
+    padding: 2px;
+    width: 256px;
+    height: 512px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerCraftingTableFood{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -442px;
+}
+
+.centerItemsFood{
+    position: relative;
+    display: block;
+    margin: -2px;
+    padding: 2px;
+    width: 260px;
+    height: 512px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerCraftingTableMechanism{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -507px;
+}
+
+.centerItemsMechanism{
+    position: relative;
+    display: block;
+    margin: -2px;
+    padding: 2px;
+    width: 512px;
+    height: 512px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerCraftingTableDyes{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -442px;
+}
+
+.centerItemsDyes{
+    position: relative;
+    display: block;
+    margin: -2px;
+    padding: 2px;
+    width: 260px;
+    height: 512px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerCraftingTableWool{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -442px;
+}
+
+.centerItemsWool{
+    position: relative;
+    display: block;
+    margin: -2px;
+    padding: 2px;
+    width: 260px;
+    height: 512px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.craftingBGColor{
+    background-color: #c6c6c6;
+    height: 50%;
+}
+
+.pointerCursor{
+    cursor: pointer;
+}
+
+/* .big:hover{
+    width: 50px;
+    height: 50px;
+} */
+
+.buttons{
+    text-align: center;
+    font-family: 'Minecraft', sans-serif;
+    -webkit-text-stroke-width: 1px;
+    background-color: #00AA00;
+    height: 60px;
+    margin: 5px;
+
+}
+
+.clenoviabg {
+    background: #272127;
+}
+
+.clenoviadisc {
+    color: #c4aeae;
+}
+
+
+
+
+
+
+
 
 
 

@@ -25,16 +25,16 @@ export default function BasicInfoForm({
 }) {
   return (
     <>
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="h6" className="my-3.5">
       Začneme od začátku. Jakou přezdívku používáš v Minecraftu?
       </Typography>
       <Grid container spacing={3} sx={{ mt: -1 }}>
         <Grid item xs={12} sm={6}>
-          <TextField
+          <input
             required
-            label="First name"
+            placeholder="Zadaj svoj nick"
             fullWidth
-            variant="outlined"
+            className="bg-transparent border-0 outline-none text-2xl w-full"
             error={error.firstName}
             value={userInfo.firstName}
             onChange={(e) => handleChange("firstName", e.target.value)}

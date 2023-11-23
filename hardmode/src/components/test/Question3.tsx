@@ -18,10 +18,11 @@ export default function MoreDetailsForm({
       </Typography>
       <Grid container spacing={3} sx={{ mt: -1 }}>
         <Grid item xs={12} sm={6}>
-          <TextField
+          <textarea
             required
-            label="Location"
+            placeholder="Napíš svoju odpoveď sem"
             fullWidth
+            className="bg-transparent border-0 w-screen max-w-xl outline-none text-2xl"
             variant="outlined"
             error={error.location}
             value={userInfo.location}

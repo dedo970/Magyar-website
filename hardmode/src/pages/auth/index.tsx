@@ -41,7 +41,7 @@ const Auth: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Auth - Project Hackathon</title>
+        <title>Magyar</title>
       </Head>
       <div className="flex h-screen flex-col items-center justify-center">
         {/* <Up delay={0.2}>

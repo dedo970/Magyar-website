@@ -6,7 +6,7 @@ import { api } from "~/utils/api";
 import { getServerAuthSession } from "~/server/auth";
 import { useEffect,useRef, useState } from "react";
 import CreateUser from "~/components/createUser";
-
+import MinecraftCrafting from "~/components/minecraftCrafting/index";
 import {
   ClientRoute,
   ClientRouter,
@@ -58,8 +58,8 @@ return (
   return (
     <> 
       <Head>
-        <title>Create T3 App</title>
-        <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="description"  />
+        <title>Magyar</title>
+        <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no Access-Control-Allow-Origin" name="description"  />
         <link rel="icon" href="/favicon.ico" />
       </Head>
         <div className="mt-40 radius grid grid-cols-2 gap-4 items-center p-4">
@@ -75,7 +75,7 @@ return (
           <p>
             <CreateUser/>
             <div className=" text-center flex justify-center">
-              <ProfileList/>
+              {/* <ProfileList/> */}
               </div>
             </p>
           )}

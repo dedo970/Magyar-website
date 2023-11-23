@@ -56,13 +56,13 @@ const Header = () => {
                 <a href="/">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="h-9 w-auto"
+                    className="h-11 w-auto"
                     src="/Hardmode-logo.png"
                     alt="Logo"
                   />
                 </div>
                 </a>
-                <div className="hidden sm:ml-6 sm:block">
+                <div className="hidden sm:ml-6 sm:block ">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <a
@@ -70,7 +70,7 @@ const Header = () => {
                         href={item.href}
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
+                          'rounded-md px-3 py-2 text-lg font-bold'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >

@@ -19,9 +19,10 @@ export default function MoreDetailsForm({
       </Typography>
       <Grid container spacing={3} sx={{ mt: -1 }}>
         <Grid item xs={12} sm={12}>
-          <TextField
+          <textarea
             required
-            label="Description"
+            placeholder="Napíš svoju odpoveď sem"
+            className="bg-transparent border-0 w-screen max-w-xl outline-none text-2xl"
             fullWidth
             multiline
             minRows={3}

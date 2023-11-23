@@ -2,6 +2,8 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import Image from 'next/image';
 import Link from 'next/link';
+import Footer from '~/components/footer';
+import Header from '~/components/header';
 
 export async function getStaticProps() {
   try {
@@ -33,6 +35,7 @@ export async function getStaticProps() {
 function Blog ({ posts }) {
   return (
     <>
+          <Header/>
     <div className="head  w-full">
       <div className="top-bg">
       </div>
@@ -59,6 +62,7 @@ function Blog ({ posts }) {
         ))}
       </div>
       </div>
+      <Footer />
       </>
   );
 };

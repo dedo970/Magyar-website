@@ -190,7 +190,7 @@ export default function FormScreen() {
             />
           );
       case 5:
-        return <><ProfileView userInfo={userInfo} sx={{ mt: 2 }} /><h1>hello</h1></>;
+        return <><ProfileView userInfo={userInfo} sx={{ mt: 2 }} /></>;
       case 6:
         return isSuccess ? <div>Success</div> : <div>Saving ...</div>;
       default:
@@ -210,24 +210,29 @@ export default function FormScreen() {
             )
           ) : (
             <React.Fragment>
+              <a href="/">
+              <img src="/Hardmode-logo.png" className="w-16 mb-2"/>
+              </a>
               {stepContent}
+              <div className=" justify-between">
               {!isSuccess && (
-                <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+                <Box>
                   {activeStep !== 0 && (
                     <button 
-                    className="prihlaska-kkt mr-2"
+                    className="uppercase opacity-30 mt-5 font-black text-sm cursor-pointer mr-2"
                     onClick={handleBack}>
-                      Back
+                      Späť
                     </button>
                   )}
                   <button
-                    className="prihlaska-kkt"
+                    className="uppercase opacity-30 mt-5 font-black text-sm cursor-pointer"
                     onClick={handleNext}
                   >
-                    {activeStep === steps.length - 1 ? "Finish" : "Next"}
+                    {activeStep === steps.length - 1 ? "Poslať" : "Ďalej"}
                   </button>
                 </Box>
               )}
+              </div>
             </React.Fragment>
           )}
       </Container>

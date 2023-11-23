@@ -31,11 +31,12 @@ export default function BasicInfoForm({
       </Typography>
       <Grid container spacing={3} sx={{ mt: -1 }}>
         <Grid item xs={12} sm={6}>
-          <TextField
+          <input
             required
-            label="Last name"
+            placeholder="Tvoje meno na Discorde"
             fullWidth
             variant="outlined"
+            className="bg-transparent border-0 w-full outline-none text-2xl"
             error={error.lastName}
             value={userInfo.lastName}
             onChange={(e) => handleChange("lastName", e.target.value)}

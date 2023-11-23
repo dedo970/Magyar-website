@@ -1,6 +1,7 @@
 import { Grid, Typography, Avatar } from "@mui/material";
 import type { SxProps } from "@mui/material";
 import type { UserInfo } from "~/types/hackathon.type";
+import Header from "../header";
 
 export default function ProfileView({
   userInfo,
@@ -10,90 +11,291 @@ export default function ProfileView({
   sx: SxProps;
 }) {
   return (
-    <Grid container sx={sx}>
-      <Grid
-        container
-        item
-        xs={12}
-        sm={5}
-        sx={{
-          display: "flex",
-          justifyContent: "start",
-          alignItems: "center",
-          mt: 1,
-          flexDirection: "column",
-        }}
-      >
-        <Avatar
-          alt="Remy Sharp"
-          src="/images/boy1.png"
-          sx={{ width: 180, height: 180 }}
-        />
-        <Typography
-          variant="h6"
-          align="right"
-          sx={{ fontStyle: "italic", mt: 1 }}
-        >
-          {`${userInfo.firstName} ${userInfo.lastName}`}
-        </Typography>
-      </Grid>
-      <Grid
-        container
-        item
-        columnSpacing={2}
-        rowSpacing={1}
-        xs={12}
-        sm={7}
-        sx={{ alignItems: "start" }}
-      >
-        {/* <Grid item xs={12} sm={4}>
-          <Typography variant="h6" align="right">
-            Name
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={8} sx={{ mt: 0.5 }}>
-          <Typography>{`${userInfo.firstName} ${userInfo.lastName}`}</Typography>
-        </Grid> */}
-        <Grid item xs={12} sm={4}>
-          <Typography variant="h6" align="right">
-            DOB
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <Typography variant="h6" align="right">
-            Gender
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <Typography variant="h6" align="right">
-            Location
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={8} sx={{ mt: 0.5 }}>
-          <Typography>{`${userInfo.location}`}</Typography>
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <Typography variant="h6" align="right">
-            Team
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={8} sx={{ mt: 0.5 }}>
-          <Typography>{`${userInfo.team}`}</Typography>
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <Typography variant="h6" align="right">
-            Sports
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <Typography variant="h6" align="right">
-            Description
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={8} sx={{ mt: 0.5 }}>
-          <Typography>{`${userInfo.description}`}</Typography>
-        </Grid>
-      </Grid>
-    </Grid>
+    <>
+    <h1 className="mt-9">Zhrnutie</h1>
+    <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-9">
+        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+              <th scope="col" className="px-6 py-3">
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">
+                </div>
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">
+                </div>
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">
+                </div>
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <span className="sr-only">Edit</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              Začneme od začátku. Jakou přezdívku používáš v Minecraftu?
+              </th>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4 text-right">
+              </td>
+            </tr>
+
+            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              {userInfo.firstName} 
+              </th>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4 text-right">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-2">
+        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+              <th scope="col" className="px-6 py-3">
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">
+                </div>
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">
+                </div>
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">
+                </div>
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <span className="sr-only">Edit</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white break-normal">
+              Hráči jsou na našem Discord serveru, abychom na sebe měli kontakt. Připoj se tam taky a níže napiš, jak se tam jmenuješ.
+              (např. Lemon_CZE#1234)
+              </th>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4 text-right">
+              </td>
+            </tr>
+
+            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              {userInfo.lastName} 
+              </th>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4 text-right">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-2">
+        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+              <th scope="col" className="px-6 py-3">
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">
+                </div>
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">
+                </div>
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">
+                </div>
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <span className="sr-only">Edit</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white break-normal">
+              Dále by nás zajímalo, jak jsi se o našem serveru dozvěděl/a.
+              </th>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4 text-right">
+              </td>
+            </tr>
+
+            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              {userInfo.location} 
+              </th>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4 text-right">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+
+      <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-2">
+        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+              <th scope="col" className="px-6 py-3">
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">
+                </div>
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">
+                </div>
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">
+                </div>
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <span className="sr-only">Edit</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white break-normal">
+              Proč sis vybral zrovna Enchant a co chceš na serveru dělat? Čím víc nás tvá zpráva zaujme, tím větší máš šanci na úspěch.
+              </th>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4 text-right">
+              </td>
+            </tr>
+
+            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              {userInfo.description} 
+              </th>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4 text-right">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+
+      <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-2">
+        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+              <th scope="col" className="px-6 py-3">
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">
+                </div>
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">
+                </div>
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">
+                </div>
+              </th>
+              <th scope="col" className="px-6 py-3">
+                <span className="sr-only">Edit</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white break-normal">
+              Kolik je ti let?
+              </th>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4 text-right">
+              </td>
+            </tr>
+
+            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              {userInfo.team} 
+              </th>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4">
+              </td>
+              <td className="px-6 py-4 text-right">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      
+      </>
   );
 }
