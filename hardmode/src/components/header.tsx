@@ -35,14 +35,14 @@ const Header = () => {
   
   return (
     <>
-    <Disclosure as="nav" className={classNames(scrollPosition > 0 ? 'bg-gray-800 transition-all fixed z-50' : ' max-[650px]:bg-gray-800 ', "z-50 fixed top-0 transition-all w-full " )}>
+    <Disclosure as="nav" className={classNames(scrollPosition > 0 ? 'headerbg transition-all fixed z-50 headerShadow' : ' max-[650px]:bg-darkGray  ', "z-50 fixed top-0 transition-all w-full py-2  px-10 " )}>
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className=" relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="headerbg relative inline-flex items-center justify-center  rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -62,7 +62,7 @@ const Header = () => {
                   />
                 </div>
                 </a>
-                <div className="hidden sm:ml-6 sm:block ">
+                <div className=" hidden sm:ml-6 sm:block ">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <a
@@ -70,7 +70,7 @@ const Header = () => {
                         href={item.href}
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:text-white',
-                          'rounded-md px-3 py-2 text-lg font-bold'
+                          'rounded-md px-3 py-2 text-lg  font-bold'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -81,14 +81,33 @@ const Header = () => {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <a>
-<img className="h-9 w-9" style={{color:"#e3e3e3"}} src="/discord.svg" alt="discord logo" />
-                </a>
+              {session.status !== "authenticated" && (
+             
+             
+             
+              <a href="https://discord.gg/dTa4A7rFGY" className="block px-4 py-2 text-md font-bold text-gray-300 cursor-pointer">
+              Discord
+              </a>
+              )}
+
+
+{session.status === "authenticated" && (
+<>
+                <div className="text-sm font-bold text-gray-300 pr-1">
+              0
+              </div>
+
+              <span className="relative flex h-2 w-2">
+  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+</span>
+</>
+)}
                             {session.status !== "authenticated" && (
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-3 font-bold text-gray-300 pr-1">
               <Link href="auth" className="account">
                 <img src="https://api.enchant.cz/head/64/MHF_Steve" />
-                <div className="nick">Přihlásit se</div></Link>
+                <div className="nick">Prihlásiť sa</div></Link>
             </div>
         )}
 
@@ -97,7 +116,7 @@ const Header = () => {
         <>
                 <Menu as="div" className="relative ml-3">
                   <div>
-                    <Menu.Button className="relative flex rounded-full  bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                    <Menu.Button className="relative flex rounded-full headerbg text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
@@ -117,14 +136,15 @@ const Header = () => {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    {/* kkt */}
+                    <Menu.Items className="absolute right-0 headerShadow z-10 mt-2 w-48 origin-top-right rounded-md headerbg py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
                           <a
                             href="/dashboard"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'text-white' : '', 'block px-4 py-2 text-md font-bold text-gray-300 ')}
                           >
-                            Your Profile
+                            Tvoj Profil
                           </a>
                         )}
                       </Menu.Item>
@@ -132,7 +152,7 @@ const Header = () => {
                         {({ active }) => (
                           <a
                             href="/dashboard"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'text-white' : '', 'block px-4 py-2 text-md font-bold text-gray-300')}
                           >
                             Mapa
                           </a>
@@ -143,7 +163,7 @@ const Header = () => {
                         {({ active }) => (
                           <a
                             href="/formlists"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'text-white' : '', 'block px-4 py-2 text-md font-bold text-gray-300')}
                           >
                             formlist
                           </a>
@@ -154,7 +174,7 @@ const Header = () => {
                         {({ active }) => (
                           <a
                             onClick={() => signOut()}
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 cursor-pointer')}
+                            className={classNames(active ? 'text-white' : '', 'block px-4 py-2 text-md font-bold text-gray-300 cursor-pointer')}
                           >
                             Sign out
                           </a>
@@ -178,8 +198,8 @@ const Header = () => {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
+                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:text-white',
+                    'block rounded-md px-3 py-2 text-lg font-bold'
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >
@@ -191,63 +211,6 @@ const Header = () => {
         </>
       )}
     </Disclosure>
-  
-    {/* <header className="fixed top-0 z-50 block w-full bg-neutral-900/80 py-4 px-5 font-medium text-gray-200">
-      <Up>
-      <div className="flex items-center justify-around">
-   
-        <Link href="/" underline={false}>
-          <div className="flex items-center space-x-3 transition-all duration-100 hover:text-white">
-          
-            <Image
-              src="/Hardmode-logo.png"
-              width={40}
-              height={40}
-              alt="Project Hackathon Logo"
-            />
-            <p className="hidden md:block">Project Hackathon</p>
-            </div>
-            </Link>
-
-            <p className="hidden md:block">Pravidlá</p>
-            <p className="hidden md:block">Wiki</p>
-            <p className="hidden md:block">Členovia</p>
-
-
-
-
-
-            {session.status === "authenticated" && (
-            <Link href="/formlist">
-            <p className="hidden md:block">Members</p>
-            </Link>
-            )}
-          
-
-
-        {session.status !== "authenticated" && (
-        <div className="flex items-center space-x-3">
-              <Link href="auth" className="account">
-                <img src="https://api.enchant.cz/head/64/MHF_Steve" />
-                <div className="nick">Přihlásit se</div></Link>
-            </div>
-        )}
-        {session.status === "authenticated" && (
-        <>
-            <div className="flex items-center space-x-3">
-                <Up delay={0.2}>
-                  <div className="flex items-center space-x-3 ">
-                  <img src="https://api.enchant.cz/head/64/MHF_Steve" className="rounded-full h-9" />
-                    <span className="text-gray-400">|</span>
-                    <Button onClick={() => signOut()}>Sign out</Button>
-                  </div>
-                </Up>
-              </div>
-              </>
-           )}
-</div>
-</Up>
-      </header> */}
       </>
   );
 };

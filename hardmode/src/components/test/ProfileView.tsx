@@ -2,6 +2,9 @@ import { Grid, Typography, Avatar } from "@mui/material";
 import type { SxProps } from "@mui/material";
 import type { UserInfo } from "~/types/hackathon.type";
 import Header from "../header";
+import * as Accordion from '@radix-ui/react-accordion';
+// import classNameNameNames from 'classNameNamenames';
+import { ChevronDownIcon } from '@radix-ui/react-icons';
 
 export default function ProfileView({
   userInfo,
@@ -12,290 +15,111 @@ export default function ProfileView({
 }) {
   return (
     <>
-    <h1 className="mt-9">Zhrnutie</h1>
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-9">
-        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-              <th scope="col" className="px-6 py-3">
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <div className="flex items-center">
+    <div className="">
+        <h4 className="text-4xl font-bold text-gray-400 tracking-widest uppercase text-center">ZHRNUTIE</h4>
+        <div className="space-y-12 px-2 xl:px-16 mt-12">
+            <div className="mt-4 flex ">
+                <div>
+                    <div className="flex items-center h-16 border-l-4 border-blue-600">
+                        <span className="text-4xl text-blue-600 px-4">Q.</span>
+                    </div>
+                    <div className="flex items-center h-16 border-l-4 border-gray-400">
+                        <span className="text-4xl text-gray-400 px-4">A.</span>
+                    </div>
                 </div>
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <div className="flex items-center">
+                <div>
+                    <div className="flex items-center h-16">
+                        <span className="text-lg text-blue-600 font-bold">Začnime od začiatku. Akú prezývku používaš v Minecrafte?</span>
+                    </div>
+                    <div className="flex items-center py-2 ">
+                        <span className="text-gray-500">{userInfo.firstName} </span>
+
+                    </div>
                 </div>
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <div className="flex items-center">
+            </div>
+
+            <div className="mt-4 flex">
+                <div>
+                    <div className="flex items-center h-16 border-l-4 border-blue-600">
+                        <span className="text-4xl text-blue-600 px-4">Q.</span>
+                    </div>
+                    <div className="flex items-center h-16 border-l-4 border-gray-400">
+                        <span className="text-4xl text-gray-400 px-4">A.</span>
+                    </div>
                 </div>
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <span className="sr-only">Edit</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="bg-white dark:bg-gray-800 dark:border-gray-700">
-              <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-              Začneme od začátku. Jakou přezdívku používáš v Minecraftu?
-              </th>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4 text-right">
-              </td>
-            </tr>
+                <div>
+                    <div className="flex items-center h-16">
+                        <span className="text-lg text-blue-600 font-bold">  Hráči sú na našom Discorde, aby sme na seba mali kontakt. Pripoj sa tam tiež a nižšie napíš, ako sa tam voláš. (napr. dedulo)</span>
+                    </div>
+                    <div className="flex items-center py-2">
+                        <span className="text-gray-500">{userInfo.lastName}</span>
 
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-              <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-              {userInfo.firstName} 
-              </th>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4 text-right">
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-
-      <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-2">
-        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-              <th scope="col" className="px-6 py-3">
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <div className="flex items-center">
+                    </div>
                 </div>
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <div className="flex items-center">
+            </div>
+
+            <div className="mt-4 flex">
+                <div>
+                    <div className="flex items-center h-16 border-l-4 border-blue-600">
+                        <span className="text-4xl text-blue-600 px-4">Q.</span>
+                    </div>
+                    <div className="flex items-center h-16 border-l-4 border-gray-400">
+                        <span className="text-4xl text-gray-400 px-4">A.</span>
+                    </div>
                 </div>
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <div className="flex items-center">
+                <div>
+                    <div className="flex items-center h-16">
+                        <span className="text-lg text-blue-600 font-bold">Ďalej by nás zaujímalo, ako si sa o našom servery dozvedel/a.</span>
+                    </div>
+                    <div className="flex items-center py-2">
+                        <span className="text-gray-500">{userInfo.location}</span>
+
+                    </div>
                 </div>
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <span className="sr-only">Edit</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="bg-white dark:bg-gray-800 dark:border-gray-700">
-              <th scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white break-normal">
-              Hráči jsou na našem Discord serveru, abychom na sebe měli kontakt. Připoj se tam taky a níže napiš, jak se tam jmenuješ.
-              (např. Lemon_CZE#1234)
-              </th>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4 text-right">
-              </td>
-            </tr>
+            </div>
 
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-              <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-              {userInfo.lastName} 
-              </th>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4 text-right">
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-
-      <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-2">
-        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-              <th scope="col" className="px-6 py-3">
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <div className="flex items-center">
+            <div className="mt-4 flex">
+                <div>
+                    <div className="flex items-center h-16 border-l-4 border-blue-600">
+                        <span className="text-4xl text-blue-600 px-4">Q.</span>
+                    </div>
+                    <div className="flex items-center h-16 border-l-4 border-gray-400">
+                        <span className="text-4xl text-gray-400 px-4">A.</span>
+                    </div>
                 </div>
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <div className="flex items-center">
+                <div>
+                    <div className="flex items-center h-16">
+                        <span className="text-lg text-blue-600 font-bold">      Prečo si si vybral zrovna Magyar a, čo chceš na servery robiť? Čím viac nás tvoja odpoveď zaujme, tým vetšiu máš šancu na úspech.</span>
+                    </div>
+                    <div className="flex items-center py-2">
+                        <span className="text-gray-500">{userInfo.description}</span>
+
+                    </div>
                 </div>
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <div className="flex items-center">
+            </div>
+
+            <div className="mt-4 flex">
+                <div>
+                    <div className="flex items-center h-16 border-l-4 border-blue-600">
+                        <span className="text-4xl text-blue-600 px-4">Q.</span>
+                    </div>
+                    <div className="flex items-center h-16 border-l-4 border-gray-400">
+                        <span className="text-4xl text-gray-400 px-4">A.</span>
+                    </div>
                 </div>
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <span className="sr-only">Edit</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="bg-white dark:bg-gray-800 dark:border-gray-700">
-              <th scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white break-normal">
-              Dále by nás zajímalo, jak jsi se o našem serveru dozvěděl/a.
-              </th>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4 text-right">
-              </td>
-            </tr>
+                <div>
+                    <div className="flex items-center h-16">
+                        <span className="text-lg text-blue-600 font-bold">Koľko máš rokov?</span>
+                    </div>
+                    <div className="flex items-center py-2">
+                        <span className="text-gray-500">{userInfo.team}</span>
 
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-              <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-              {userInfo.location} 
-              </th>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4 text-right">
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-
-
-      <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-2">
-        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-              <th scope="col" className="px-6 py-3">
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <div className="flex items-center">
+                    </div>
                 </div>
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <div className="flex items-center">
-                </div>
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <div className="flex items-center">
-                </div>
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <span className="sr-only">Edit</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="bg-white dark:bg-gray-800 dark:border-gray-700">
-              <th scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white break-normal">
-              Proč sis vybral zrovna Enchant a co chceš na serveru dělat? Čím víc nás tvá zpráva zaujme, tím větší máš šanci na úspěch.
-              </th>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4 text-right">
-              </td>
-            </tr>
+            </div>
 
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-              <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-              {userInfo.description} 
-              </th>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4 text-right">
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-
-
-      <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-2">
-        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-              <th scope="col" className="px-6 py-3">
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <div className="flex items-center">
-                </div>
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <div className="flex items-center">
-                </div>
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <div className="flex items-center">
-                </div>
-              </th>
-              <th scope="col" className="px-6 py-3">
-                <span className="sr-only">Edit</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="bg-white dark:bg-gray-800 dark:border-gray-700">
-              <th scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white break-normal">
-              Kolik je ti let?
-              </th>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4 text-right">
-              </td>
-            </tr>
-
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-              <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-              {userInfo.team} 
-              </th>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4">
-              </td>
-              <td className="px-6 py-4 text-right">
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      
+            </div>
+            </div>
       </>
   );
 }

@@ -13,8 +13,8 @@ export default function MoreDetailsForm({
 }) {
   return (
     <>
-      <Typography variant="h6" gutterBottom>
-      Dále by nás zajímalo, jak jsi se o našem serveru dozvěděl/a.
+      <Typography variant="h6" gutterBottom className="text-xl font-semibold text-gray-300">
+      Ďalej by nás zaujímalo, ako si sa o našom servery dozvedel/a.
       </Typography>
       <Grid container spacing={3} sx={{ mt: -1 }}>
         <Grid item xs={12} sm={6}>

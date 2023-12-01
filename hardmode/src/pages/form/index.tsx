@@ -30,7 +30,7 @@ import CreateSuccess from "~/components/test/CreateSuccess";
 import router, { useRouter } from "next/router";
 import { useState } from "react";
 import { nanoid } from "nanoid";
-
+import {useEffect} from 'react';
 const steps = ["Basic Info","Question2","Question3","Question4", "More details", "Review"];
 let dataId = nanoid(6);
 
@@ -130,7 +130,7 @@ export default function FormScreen() {
     }
     if (!checkStepValidity(userInfo, activeStep, error, setError)) return;
     setActiveStep(activeStep + 1);
-  };
+  }
 
   const handleBack = () => {
     setActiveStep(activeStep - 1);
@@ -200,7 +200,7 @@ export default function FormScreen() {
 
   return (
     <>
-    <div className="flex items-center pt-4 top-2/4 h-screen">
+    <div className="flex items-center pt-4 top-2/4 min-h-screen">
       <Container component="main" maxWidth="md" sx={{ p: 2 }}>
           {activeStep === steps.length ? (
             isSuccess ? (
@@ -213,6 +213,7 @@ export default function FormScreen() {
               <a href="/">
               <img src="/Hardmode-logo.png" className="w-16 mb-2"/>
               </a>
+
               {stepContent}
               <div className=" justify-between">
               {!isSuccess && (

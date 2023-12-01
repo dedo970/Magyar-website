@@ -25,8 +25,8 @@ export default function BasicInfoForm({
 }) {
   return (
     <>
-      <Typography variant="h6" className="my-3.5">
-      Začneme od začátku. Jakou přezdívku používáš v Minecraftu?
+      <Typography variant="h6" className="my-3.5 text-xl font-semibold text-gray-300">
+      Začnime od začiatku. Akú prezývku používaš v Minecrafte?
       </Typography>
       <Grid container spacing={3} sx={{ mt: -1 }}>
         <Grid item xs={12} sm={6}>

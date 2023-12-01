@@ -16,6 +16,8 @@ import Loading from "~/components/test/Loading";
 import DashboardScreen from "~/screens/DashboardScreen";
 import ProfileViewScreen from "~/screens/ProfileViewScreen";
 import ProfileList from "~/components/ProfileList";
+import Header from "~/components/header";
+import Footer from "~/components/footer";
 
 const Dashboard: NextPage = () => {
   const session = useSession();
@@ -32,7 +34,7 @@ const Dashboard: NextPage = () => {
     canvas: element,
     width: 300,
     height: 400,
-    skin: `https://crafatar.com/skins/${session.data?.user.uiid}`,
+    skin: `https://mineskin.eu/skin/${session.data?.user?.uiid}`,
     animation: new skinview3d.IdleAnimation(),
     fovAnimation: 70,
     setSize: 300,
@@ -62,6 +64,7 @@ return (
         <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no Access-Control-Allow-Origin" name="description"  />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header/>
         <div className="mt-40 radius grid grid-cols-2 gap-4 items-center p-4">
         {/* <canvas ref={ref}></canvas> */}
         <MyComponent/>
@@ -91,6 +94,7 @@ return (
             </div>
           </div>
         </div>
+        <Footer/>
     </>
   );
 };

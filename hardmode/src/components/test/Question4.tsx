@@ -13,9 +13,9 @@ export default function MoreDetailsForm({
 }) {
   return (
     <>
-      <Typography variant="h6" gutterBottom>
-      Proč sis vybral zrovna Enchant a co chceš na serveru dělat?
-	Čím víc nás tvá zpráva zaujme, tím větší máš šanci na úspěch.
+      <Typography variant="h6" gutterBottom className="text-xl font-semibold text-gray-300">
+      Prečo si si vybral zrovna Magyar a, čo chceš na servery robiť?
+	    Čím viac nás tvoja odpoveď zaujme, tým vetšiu máš šancu na úspech.
       </Typography>
       <Grid container spacing={3} sx={{ mt: -1 }}>
         <Grid item xs={12} sm={12}>

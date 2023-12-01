@@ -11,7 +11,9 @@ export default {
         "border-inherit": "inherit",
       },
       colors: {
-        midnight: "#161616",
+        "midnight": "#161616",
+        "darkGray":"#181218",
+        
       },
       keyframes: {
         overlayShow: {

@@ -13,15 +13,15 @@ export default function MoreDetailsForm({
 }) {
   return (
     <>
-      <Typography variant="h6" gutterBottom>
-      Kolik je ti let?
+      <Typography variant="h6" gutterBottom className="text-xl font-semibold text-gray-300">
+      Koľko máš rokov?
       </Typography>
       <Grid container spacing={3} sx={{ mt: -1 }}>
         <Grid item xs={12} sm={6}>
           <input
             required
             placeholder="Napíš svoj vek"
-            className="bg-transparent border-0 outline-none text-2xl w-full"
+            className="bg-transparent border-0 w-full outline-none text-2xl"
             fullWidth
             variant="outlined"
             error={error.team}

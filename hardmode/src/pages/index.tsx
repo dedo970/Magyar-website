@@ -71,10 +71,19 @@ export default function Home() {
       </div>
 
     </div>
-    <div className="inner text-center">
-        <h1>Heloodsdasdoasoo</h1>
-        {/* <MinecraftCrafting/> */}
-      </div>
+    <div className="inner text-center py-12">
+      <h1 className="text-5xl font-bold title my-9">Pridaj sa k nám</h1>
+    <div className="invite my-6 mx-56">Budeme radi, ked sa pridáš k našej komunite a zapojíš sa do tvorenia našeho servera.</div>
+    <ul className="mx-auto w-96 " style={{ listStyleType: 'disc' }}>
+      <li className="invite w-fit">Adresa serveru: </li>
+
+      <li className="invite w-fit">Discord serveru:       <a className="hover:underline-offset-1 text-white" href="https://discord.gg/dTa4A7rFGY">discord.magyar.sk</a></li>
+
+    </ul>
+    </div>
+      <div className="text-center">
+
+    </div>
     </div>
     <Footer />
     </>
