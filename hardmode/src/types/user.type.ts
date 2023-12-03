@@ -5,6 +5,6 @@ export type THackathon = {
     password: string;
     image: string;
     uiid: string;
-    role: string | undefined | null
+    role: any
 
   };
