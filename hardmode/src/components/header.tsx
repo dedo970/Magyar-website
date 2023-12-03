@@ -5,6 +5,7 @@ import Up from "~/animations/up";
 import { Button, Link } from "~/ui";
 import { toast } from "sonner";
 import { ClientRoute } from "~/utils/client-router";
+import type { User } from "next-auth"
 import { useScrollPosition } from "~/hooks/useScrollPosition";
 import { Fragment } from 'react'
 const navigation = [
@@ -32,7 +33,8 @@ const Header = () => {
   }
 
   const scrollPosition = useScrollPosition()
-  
+
+
   return (
     <>
     <Disclosure as="nav" className={classNames(scrollPosition > 0 ? 'headerbg transition-all fixed z-50 headerShadow' : ' max-[650px]:bg-darkGray  ', "z-50 fixed top-0 transition-all w-full py-2  px-10 " )}>
@@ -158,7 +160,7 @@ const Header = () => {
                           </a>
                         )}
                       </Menu.Item>
-                      {session.data.user?.role === "Admin" && (
+                      {session?.data?.user?.role === "Admin" && (
                                             <Menu.Item>
                         {({ active }) => (
                           <a

@@ -31,7 +31,7 @@ const formlists: NextPage = () => {
         <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="description"  />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        {session.data?.user.role === "Admin" && (
+        {session.data?.user?.role === "Admin" && (
         <>
 <Header/>
               <div className=" flex justify-center h-screen">

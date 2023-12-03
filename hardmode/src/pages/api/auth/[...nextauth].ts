@@ -9,7 +9,7 @@ import { loginSchema } from "~/validation/auth";
 export const authOptions: NextAuthOptions = {
   callbacks: {
     jwt: async ({ token, user }) => {
-      if (user) {
+      if (user && user.id && user.role && user.uiid) {
         token.id = user.id;
         token.email = user.email;
         token.uiid = user.uiid;
@@ -20,7 +20,7 @@ export const authOptions: NextAuthOptions = {
       return token;
     },
    async session({ session, token }) {
-      if (token && session.user) {
+      if (token && session.user && token.id && token.role) {
         session.user.id = token.id as string;
         session.user.uiid = token.uiid;
         session.user.role = token.role;
