@@ -185,7 +185,7 @@ const CreateUser = () => {
   <option value="Moderator">Moderator</option>
   <option value="User">User</option>
 </select>
-          {errors.role && <Alert>{errors.role?.message}</Alert>}
+          {errors.role && ""}
         </div>
 
 
