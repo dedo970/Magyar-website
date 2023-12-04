@@ -6,7 +6,6 @@ import { api } from "~/utils/api";
 import { getServerAuthSession } from "~/server/auth";
 import { useEffect,useRef, useState } from "react";
 import CreateUser from "~/components/createUser";
-import MinecraftCrafting from "~/components/minecraftCrafting/index";
 import {
   ClientRoute,
   ClientRouter,
