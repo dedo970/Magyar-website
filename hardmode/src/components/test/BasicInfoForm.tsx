@@ -33,9 +33,7 @@ export default function BasicInfoForm({
           <input
             required
             placeholder="Zadaj svoj nick"
-            fullWidth
             className="bg-transparent border-0 outline-none text-2xl w-full"
-            error={error.firstName}
             value={userInfo.firstName}
             onChange={(e) => handleChange("firstName", e.target.value)}
           />
