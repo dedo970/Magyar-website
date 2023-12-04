@@ -10,7 +10,7 @@ declare module "next-auth" {
     user: {
       id: string;
       uiid: string;
-      role: string;
+      role: "User" | "Admin";
       email: string;
       name:string;
 
@@ -18,7 +18,7 @@ declare module "next-auth" {
   }
 
   interface User {
-    role: string;
+    role: "User" | "Admin";
   }
   
 }
