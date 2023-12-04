@@ -17,6 +17,13 @@ import Footer from "~/components/footer";
 // import data from './clenovia.json';
 
 export default function clenovia() {
+
+  type Clenovia = {
+    nick: string,
+    date: string,
+    uiid: string,
+   }
+
     const [data,setData]=useState([]);
     const [loading, setLoading] = useState(false);
     const getData=()=>{
@@ -63,15 +70,15 @@ export default function clenovia() {
         {loading ? 
         <div className="page py-12 grid lg:grid-cols-3 gap-4 max-w-screen-xl mx-auto md:grid-cols-2 sm:grid-cols-1 px-12">
 
-            {data.map((item) => 
+            {data.map((item: Clenovia) => 
             <div className=" clenoviabg grid grid-cols-2 p-3 rounded-md shadow">
             {/* <img src={`https://cravatar.eu/avatar/${Chleba_}/64.png`} /> */}
             {/* <img className="rounded-md shadow" loading="lazy" src="https://cravatar.eu/avatar/Chleba_/64.png" /> */}
-            <img className="rounded-md shadow" loading="lazy" src={`https://minotar.net/helm/${item.uiid}/64.png`} />
+            <img className="rounded-md shadow" loading="lazy" src={`https://minotar.net/helm/${item?.uiid}/64.png`} />
             
             <div className="text-right">
-            <h1 className="text-2xl font-bold">{item.nick}</h1>
-            <h1 className="text-xl clenoviadisc">{item.date}</h1>
+            <h1 className="text-2xl font-bold">{item?.nick}</h1>
+            <h1 className="text-xl clenoviadisc">{item?.date}</h1>
             </div>
             </div>
             )}

@@ -23,6 +23,14 @@ type TForm = {
 };
 
 const Auth: React.FC = () => {
+  const [userName, setUserName] = useState<string>("");
+  const [userPassword, setPassword] = useState<string>("");
+  const signIn = async (e: React.FormEvent) => {
+    
+    e.preventDefault();
+    console.log(e);
+  };
+
   return (
     <>
       <Head>
