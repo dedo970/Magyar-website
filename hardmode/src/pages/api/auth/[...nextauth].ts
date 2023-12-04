@@ -5,11 +5,36 @@ import bcrypt from "bcrypt";
 import { env } from "~/env.mjs";
 import { prisma } from "~/server/db";
 import { loginSchema } from "~/validation/auth";
+import {type DefaultSession} from "next-auth"
+declare module "next-auth" {
+  interface Session extends DefaultSession {
+    user: {
+      id: string;
+      name: string;
+      email: string;
+      uiid: string;
+      role: "User" | "Admin";
+      // ...other properties
+      // role: UserRole;
+    } & DefaultSession["user"];
+  }
+
+  interface User {
+    // ...other properties
+    role: "User" | "Admin";
+  }
+}
+
 
 export const authOptions: NextAuthOptions = {
+  session: {
+    strategy: "jwt",
+    maxAge: 30 * 24 * 60 * 60, // 30 days
+  },
+
   callbacks: {
     jwt: async ({ token, user }) => {
-      if (user && user.id && user.role && user.uiid) {
+      if (user) {
         token.id = user.id;
         token.email = user.email;
         token.uiid = user.uiid;
@@ -17,22 +42,28 @@ export const authOptions: NextAuthOptions = {
         
       }
 
-      return token;
+      return Promise.resolve(token);;
     },
-   async session({ session, token }) {
-      if (token && session.user && token.id && token.role) {
-        session.user.id = token.id as string;
-        session.user.uiid = token.uiid;
-        session.user.role = token.role;
+   session: async ({ session, token }) => {
+    session.user = {
+        id: token.id as string,
+        uiid: token.uiid,
+        role: token.role,
       }
 
-      return session;
+      return Promise.resolve(session);
     },
+
+
+
+
+
+
+
   },
   secret: env.NEXTAUTH_SECRET,
   pages: {
     signIn: "/login",
-    newUser: "/register",
     error: "/login",
   },
   providers: [
