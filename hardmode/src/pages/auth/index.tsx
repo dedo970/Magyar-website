@@ -23,20 +23,6 @@ type TForm = {
 };
 
 const Auth: React.FC = () => {
-  const [userName, setUserName] = useState<string>("");
-  const [userPassword, setPassword] = useState<string>("");
-  const signIn = async (e: React.FormEvent) => {
-    
-    e.preventDefault();
-    console.log(e);
-    if (!userName || !userPassword) return;
-    const result = await hello2.mutateAsync({
-      username: userName,
-      password: userPassword,
-    });
-    console.log(result);
-  };
-
   return (
     <>
       <Head>
