@@ -66,6 +66,7 @@ export const authOptions: NextAuthOptions = {
       };
       return Promise.resolve(session);
     },
+
     async signIn({ user, account, profile, email, credentials }) {
       /**
        * this used check your user already in database or not
@@ -91,7 +92,7 @@ export const authOptions: NextAuthOptions = {
       return Promise.resolve(true);
     },
   },
-
+  
   adapter: PrismaAdapter(prisma),
   providers: [
     CredentialsProvider({
@@ -124,5 +125,11 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   secret: env.NEXTAUTH_SECRET,
+  pages: {
+    signIn: "/login",
+    error: "/login",
+  }
+
 };
+
 export default NextAuth(authOptions);
