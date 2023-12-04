@@ -10,10 +10,10 @@ declare module "next-auth" {
     user: {
       id: string;
       uiid: string;
-      role: any;
+      role: "User" | "Admin";
       email: string;
       name:string;
-      
+
     } & DefaultSession;
   }
 
