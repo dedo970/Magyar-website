@@ -74,7 +74,7 @@ return (
           <p>{session.data?.user?.email}</p>
                     <p>{session.data?.user?.email}</p>
           <p>{secret.data ? secret.data : "Loading tRPC query..."}</p>
-          {session.data?.user.role === "Admin" && (
+          {session.data?.user.role === "ADMIN" && (
           <p>
             <CreateUser/>
             <div className=" text-center flex justify-center">
@@ -82,7 +82,7 @@ return (
               </div>
             </p>
           )}
-                    {session.data?.user.role === "User" && (
+                    {session.data?.user.role === "USER" && (
           <p>
             Uvedom sa lmao
             </p>

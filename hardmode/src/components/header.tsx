@@ -160,7 +160,7 @@ const Header = () => {
                           </a>
                         )}
                       </Menu.Item>
-                      {session?.data?.user?.role === "Admin" && (
+                      {session?.data.user.role === "ADMIN" && (
                                             <Menu.Item>
                         {({ active }) => (
                           <a
