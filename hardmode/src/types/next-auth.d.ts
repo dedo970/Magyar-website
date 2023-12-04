@@ -14,7 +14,7 @@ declare module "next-auth" {
       email: string;
       name:string;
 
-    } & DefaultSession;
+    } & DefaultSession["user"];
   }
 
   interface User {
