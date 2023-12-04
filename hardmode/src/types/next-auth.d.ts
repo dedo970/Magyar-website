@@ -10,7 +10,9 @@ declare module "next-auth" {
     user: {
       id: string;
       uiid: string;
-      role: any
+      role: any;
+      email: string;
+      username: string;
     } & DefaultSession;
   }
 
@@ -26,3 +28,5 @@ declare module "next-auth/jwt" {
   }
 }
 
+
+export { DefaultSession };
