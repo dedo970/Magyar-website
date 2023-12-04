@@ -34,10 +34,7 @@ export default function BasicInfoForm({
           <input
             required
             placeholder="Tvoje meno na Discorde"
-            fullWidth
-            variant="outlined"
             className="bg-transparent border-0 w-full outline-none text-2xl"
-            error={error.lastName}
             value={userInfo.lastName}
             onChange={(e) => handleChange("lastName", e.target.value)}
           />

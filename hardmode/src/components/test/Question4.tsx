@@ -23,11 +23,6 @@ export default function MoreDetailsForm({
             required
             placeholder="Napíš svoju odpoveď sem"
             className="bg-transparent border-0 w-screen max-w-xl outline-none text-2xl"
-            fullWidth
-            multiline
-            minRows={3}
-            variant="outlined"
-            error={error.description}
             value={userInfo.description}
             onChange={(e) => handleChange("description", e.target.value)}
           />

@@ -22,9 +22,6 @@ export default function MoreDetailsForm({
             required
             placeholder="Napíš svoj vek"
             className="bg-transparent border-0 w-full outline-none text-2xl"
-            fullWidth
-            variant="outlined"
-            error={error.team}
             value={userInfo.team}
             onChange={(e) => handleChange("team", e.target.value)}
           />

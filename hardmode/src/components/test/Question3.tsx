@@ -21,10 +21,7 @@ export default function MoreDetailsForm({
           <textarea
             required
             placeholder="Napíš svoju odpoveď sem"
-            fullWidth
             className="bg-transparent border-0 w-screen max-w-xl outline-none text-2xl"
-            variant="outlined"
-            error={error.location}
             value={userInfo.location}
             onChange={(e) => handleChange("location", e.target.value)}
           />
