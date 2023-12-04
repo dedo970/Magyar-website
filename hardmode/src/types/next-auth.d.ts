@@ -12,7 +12,8 @@ declare module "next-auth" {
       uiid: string;
       role: any;
       email: string;
-      username: string;
+      name:string;
+      
     } & DefaultSession;
   }
 

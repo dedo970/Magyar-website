@@ -21,7 +21,7 @@ declare module "next-auth" {
       id: string;
       name: string;
       email: string;
-
+      uiid: string;
       role: "User" | "Admin";
       // ...other properties
       // role: UserRole;
