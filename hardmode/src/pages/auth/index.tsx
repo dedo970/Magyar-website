@@ -25,7 +25,6 @@ type TForm = {
 const Auth: React.FC = () => {
   const [userName, setUserName] = useState<string>("");
   const [userPassword, setPassword] = useState<string>("");
-  const hello2 = api.example.hello2.useMutation();
   const signIn = async (e: React.FormEvent) => {
     
     e.preventDefault();
