@@ -22,7 +22,7 @@ declare module "next-auth" {
       name: string;
       email: string;
 
-      role: "USER" | "ADMIN";
+      role: "User" | "Admin";
       // ...other properties
       // role: UserRole;
     } & DefaultSession["user"];
@@ -30,7 +30,7 @@ declare module "next-auth" {
 
   interface User {
     // ...other properties
-    role: "USER" | "ADMIN";
+    role: "User" | "Admin";
   }
 }
 
