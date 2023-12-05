@@ -23,7 +23,7 @@ import Footer from "~/components/footer";
 
 export default function Home() {
 
-  function Event(props) {
+  function Event(props: { isEvent: boolean; }) {
     const isEvent = props.isEvent;
     if (isEvent === false) {
       return <div className="inner home-grid ">
