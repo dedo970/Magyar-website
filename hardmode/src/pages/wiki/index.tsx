@@ -32,7 +32,7 @@ export async function getStaticProps() {
   }
 };
 
-function Blog ({ posts }) {
+function Blog ( posts: { slug: any; frontmatter: any; }[] ) {
   return (
     <>
           <Header/>
