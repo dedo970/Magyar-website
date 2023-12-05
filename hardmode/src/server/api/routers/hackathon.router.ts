@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { createTRPCRouter } from "../trpc";
-import { router, publicProcedure } from "../trpc";
+import { publicProcedure } from "../trpc";
 // Schemas:
 import {
   newHackathonSchema,
