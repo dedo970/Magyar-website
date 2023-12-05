@@ -24,7 +24,7 @@ const Dashboard: NextPage = () => {
   const secret = api.protected.getSecretMessage.useQuery();
 
   const [rerender, setRerender] = useState(false);
-  const ref = useRef(null);
+  const ref = useRef<HTMLInputElement | null>(null)
   function MyComponent() {
   useEffect(() => {
   const element = ref.current

@@ -9,6 +9,7 @@ import {
 import bcrypt from "bcryptjs";
 import { env } from "~/env.mjs";
 import { prisma } from "~/server/db";
+import { loginSchema } from "~/validation/auth";
 
 /**
  * change the session type like this
@@ -66,31 +67,6 @@ export const authOptions: NextAuthOptions = {
       };
       return Promise.resolve(session);
     },
-
-    async signIn({ user, account, profile, email, credentials }) {
-      /**
-       * this used check your user already in database or not
-       *
-       * but i think this will be used if you are login with google or other OAuth
-       *
-       *
-       *  */
-
-      if (!user || !user.email) {
-        return Promise.reject(new Error("Invalid user object"));
-      }
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
-      const isUserRegistered = await prisma.user.findUnique({
-        where: {
-          email: user.email,
-        },
-      });
-      if (!isUserRegistered) {
-        // if not register then redirect to /notfound page
-        return Promise.resolve(`/notfound`);
-      }
-      return Promise.resolve(true);
-    },
   },
   
   adapter: PrismaAdapter(prisma),
@@ -104,23 +80,28 @@ export const authOptions: NextAuthOptions = {
       // ignore error eslint
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      async authorize(credentials, req) {
-        const { email, password } = credentials as {
-          email: string;
-          password: string;
-        };
-        const user = await prisma.user.findUnique({
-          where: { email },
+      authorize: async (credentials) => {
+        const cred = await loginSchema.parseAsync(credentials);
+        const user = await prisma.user.findFirst({
+          where: { email: cred.email },
         });
         if (!user) {
-          throw new Error("No user found");
+          return null;
         }
-
-        const isValid = await bcrypt.compare(password, user.password);
-        if (!isValid) {
-          throw new Error("Invalid password");
+        const isValidPassword = (
+          cred.password,
+          user.password
+        );
+        if (!isValidPassword) {
+          return null;
         }
-        return user;
+        return {
+          id: user.id,
+          email: user.email,
+          username: user.username,
+          uiid: user.uiid,
+          role: user.role,
+        };
       },
     }),
   ],
