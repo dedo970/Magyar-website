@@ -102,7 +102,7 @@ export default function FormScreen() {
     mutate,
     isSuccess,
   }: {
-    data: { _id: string } | undefined;
+    data: { id: string } | undefined;
     mutate: (userInfo: UserInfo) => void;
     isSuccess: boolean;
   } = api.hackathon.createHackathon.useMutation({});
