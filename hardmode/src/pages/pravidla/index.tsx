@@ -4,12 +4,6 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { api } from "~/utils/api";
 import Up from "~/animations/up";
-
-
-
-
-import DashboardScreen from "~/screens/DashboardScreen";
-import ProfileViewScreen from "~/screens/ProfileViewScreen";
 import Loading from "~/components/test/Loading";
 import Header from "~/components/header";
 import Footer from "~/components/footer";

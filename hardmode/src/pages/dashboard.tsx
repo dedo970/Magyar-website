@@ -12,8 +12,6 @@ import {
   ClientRouterProvider,
 } from "../utils/client-router";
 import Loading from "~/components/test/Loading";
-import DashboardScreen from "~/screens/DashboardScreen";
-import ProfileViewScreen from "~/screens/ProfileViewScreen";
 import ProfileList from "~/components/ProfileList";
 import Header from "~/components/header";
 import Footer from "~/components/footer";

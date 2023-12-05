@@ -13,9 +13,6 @@ import {
   ClientRouterProvider,
 } from "../utils/client-router";
 import Loading from "~/components/test/Loading";
-import DashboardScreen from "~/screens/DashboardScreen";
-import ProfileViewScreen from "~/screens/ProfileViewScreen";
-import ProfileView from "~/components/ProfileView";
 import ProfileList from "~/components/ProfileList";
 import FormList from "~/components/ProfileList";
 import Header from "~/components/header";
