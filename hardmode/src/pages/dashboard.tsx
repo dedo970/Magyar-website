@@ -25,38 +25,38 @@ const Dashboard: NextPage = () => {
 
   const [rerender, setRerender] = useState(false);
   const ref = useRef(null)
-  function MyComponent() {
-  useEffect(() => {
-  const element = ref.current
+//   function MyComponent() {
+//   useEffect(() => {
+//   const element = ref.current
 
-  const viewer = new skinview3d.SkinViewer({
-    canvas: document.getElementById("skin_container"),
-    width: 300,
-    height: 400,
-    skin: `https://mineskin.eu/skin/${session.data?.user?.uiid}`,
-    animation: new skinview3d.IdleAnimation(),
-    fovAnimation: 70,
-    setSize: 300,
-    enableRotate: true,
-    enableZoom: false,
-    enablePan: false,
+//   const viewer = new skinview3d.SkinViewer({
+//     canvas: document.getElementById("skin_container"),
+//     width: 300,
+//     height: 400,
+//     skin: `https://mineskin.eu/skin/${session.data?.user?.uiid}`,
+//     animation: new skinview3d.IdleAnimation(),
+//     fovAnimation: 70,
+//     setSize: 300,
+//     enableRotate: true,
+//     enableZoom: false,
+//     enablePan: false,
     
     
-  }); 
-  viewer.controls.enableRotate = true;
-  viewer.controls.enableZoom = false;
-  viewer.controls.enablePan = false;
+//   }); 
+//   viewer.controls.enableRotate = true;
+//   viewer.controls.enableZoom = false;
+//   viewer.controls.enablePan = false;
 
-  console.log('mounted')
+//   console.log('mounted')
 
-}, []);
-return (
-  <div className="touch-none resize-none">
-  {/* <canvas className="touch-none resize-none cursor-grab" ref={ref}></canvas> */}
-  <canvas className="touch-none resize-none cursor-grab" id="skin_container"></canvas>
-  </div>
-)
-  }
+// }, []);
+// return (
+//   <div className="touch-none resize-none">
+//   {/* <canvas className="touch-none resize-none cursor-grab" ref={ref}></canvas> */}
+//   <canvas className="touch-none resize-none cursor-grab" id="skin_container"></canvas>
+//   </div>
+// )
+//   }
   return (
     <> 
       <Head>
@@ -67,7 +67,7 @@ return (
       <Header/>
         <div className="mt-40 radius grid grid-cols-2 gap-4 items-center p-4">
         {/* <canvas ref={ref}></canvas> */}
-        <MyComponent/>
+        {/* <MyComponent/> */}
         <div className="border p-4">
           <h1 className="text-lg">Dashboard - Protected</h1>
           <p>{JSON.stringify(session)}</p>
