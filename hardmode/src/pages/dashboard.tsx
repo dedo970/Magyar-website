@@ -24,13 +24,13 @@ const Dashboard: NextPage = () => {
   const secret = api.protected.getSecretMessage.useQuery();
 
   const [rerender, setRerender] = useState(false);
-  const ref = useRef<HTMLInputElement | null>(null)
+  const ref = useRef(null)
   function MyComponent() {
   useEffect(() => {
   const element = ref.current
 
   const viewer = new skinview3d.SkinViewer({
-    canvas: element,
+    canvas: document.getElementById("skin_container"),
     width: 300,
     height: 400,
     skin: `https://mineskin.eu/skin/${session.data?.user?.uiid}`,
@@ -52,7 +52,8 @@ const Dashboard: NextPage = () => {
 }, []);
 return (
   <div className="touch-none resize-none">
-  <canvas className="touch-none resize-none cursor-grab" ref={ref}></canvas>
+  {/* <canvas className="touch-none resize-none cursor-grab" ref={ref}></canvas> */}
+  <canvas className="touch-none resize-none cursor-grab" id="skin_container"></canvas>
   </div>
 )
   }
