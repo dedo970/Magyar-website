@@ -15,6 +15,7 @@ interface ModalProps {
 }
 
 const DeleteModal = (props: ModalProps) => {
+  const [open, setOpen] = useState(false);
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
       <Dialog.Trigger asChild>{props.btn}</Dialog.Trigger>
