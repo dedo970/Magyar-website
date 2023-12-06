@@ -20,7 +20,7 @@ export interface THackathon {
     description: string;
   }
   
-  export interface Error {
+  export type Error = {
     firstName: boolean;
     lastName: boolean;
     location: boolean;
