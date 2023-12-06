@@ -1,4 +1,4 @@
-export interface THackathon {
+export type THackathon = {
     id?: string;
     firstName: string;
     lastName: string;
@@ -8,7 +8,7 @@ export interface THackathon {
     description: string;
   }
 
-  export interface ProfileRow {
+  export type ProfileRow = {
     _id: string;
     firstName: string;
     lastName: string;
