@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 export type Post = {
