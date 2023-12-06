@@ -8,7 +8,6 @@ import { ChakraProvider } from '@chakra-ui/react'
 
 import Footer from "~/components/footer"
 import Header from "~/components/header";
-import Example from "~/components/header copy";
 import Head from "next/head";
 
 const MyApp: AppType<{ session: Session | null }> = ({

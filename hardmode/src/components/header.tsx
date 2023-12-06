@@ -55,7 +55,7 @@ const Header = () => {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <a href="/">
+                <Link href="/">
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="h-11 w-auto"
@@ -63,11 +63,11 @@ const Header = () => {
                     alt="Logo"
                   />
                 </div>
-                </a>
+                </Link>
                 <div className=" hidden sm:ml-6 sm:block ">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
                         className={classNames(
@@ -77,7 +77,7 @@ const Header = () => {
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -87,9 +87,9 @@ const Header = () => {
              
              
              
-              <a href="https://discord.gg/dTa4A7rFGY" className="block px-4 py-2 text-md font-bold text-gray-300 cursor-pointer">
+              <Link href="https://discord.gg/dTa4A7rFGY" className="block px-4 py-2 text-md font-bold text-gray-300 cursor-pointer">
               Discord
-              </a>
+              </Link>
               )}
 
 
@@ -142,44 +142,44 @@ const Header = () => {
                     <Menu.Items className="absolute right-0 headerShadow z-10 mt-2 w-48 origin-top-right rounded-md headerbg py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
-                          <a
+                          <Link
                             href="/dashboard"
                             className={classNames(active ? 'text-white' : '', 'block px-4 py-2 text-md font-bold text-gray-300 ')}
                           >
                             Tvoj Profil
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
+                          <Link
                             href="/dashboard"
                             className={classNames(active ? 'text-white' : '', 'block px-4 py-2 text-md font-bold text-gray-300')}
                           >
                             Mapa
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                       {session?.data.user.role === "Admin" && (
                                             <Menu.Item>
                         {({ active }) => (
-                          <a
+                          <Link
                             href="/formlists"
                             className={classNames(active ? 'text-white' : '', 'block px-4 py-2 text-md font-bold text-gray-300')}
                           >
                             formlist
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                       )}
                       <Menu.Item>
                         {({ active }) => (
-                          <a
+                          <Link
                             onClick={() => signOut()}
                             className={classNames(active ? 'text-white' : '', 'block px-4 py-2 text-md font-bold text-gray-300 cursor-pointer')}
                           >
                             Sign out
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                     </Menu.Items>
