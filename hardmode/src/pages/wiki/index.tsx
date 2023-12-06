@@ -48,7 +48,7 @@ function Blog ( posts: { slug: any; frontmatter: any; }[] ) {
 
     <div className='page'>
     <div className="inner wiki-grid">
-        {posts.map(({ slug, frontmatter }) => (
+        {/* {posts.map(({ slug, frontmatter }) => (
           <div key={slug} className="">
             <Link href={`/post/${slug}`} legacyBehavior>
               <a className=''>
@@ -57,7 +57,7 @@ function Blog ( posts: { slug: any; frontmatter: any; }[] ) {
               </a>
             </Link>
           </div>
-        ))}
+        ))} */}
       </div>
       </div>
       <Footer />
