@@ -6,20 +6,19 @@ export interface THackathon {
     location: string;
     team: string;
     description: string;
-
-  };
+  }
 
   export interface ProfileRow {
     _id: string;
     firstName: string;
     lastName: string;
-  };
+  }
   
   export type UserInfo = ProfileRow & {
     location: string;
     team: string;
     description: string;
-  };
+  }
   
   export interface Error {
     firstName: boolean;
@@ -27,7 +26,7 @@ export interface THackathon {
     location: boolean;
     team: boolean;
     description: boolean;
-  };
+  }
   
   export type Field =
     | "firstName"
