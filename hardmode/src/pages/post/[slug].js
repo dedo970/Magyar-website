@@ -1,7 +1,7 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
-
+import Link from "next/link";
 export async function getStaticPaths() {
   try {
     const files = fs.readdirSync('public/posts');
@@ -57,9 +57,9 @@ function Post ({ frontmatter, content }) {
           {/* <img className="logo" src="/Hardmode-logo.png" /> */}
           <div>
               <h1 className="text-5xl font-extrabold">{frontmatter.title}</h1>
-              <a href="/wiki" className="flex justify-center pt-6">
+              <Link href="/wiki" className="flex justify-center pt-6">
                   <button className="prihlaska-kkt text-center">back to wiki</button>
-              </a>
+              </Link>
           </div>
       </div>
       </div>

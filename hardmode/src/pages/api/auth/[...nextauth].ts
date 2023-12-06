@@ -56,10 +56,8 @@ export const authOptions: NextAuthOptions = {
     },
     session: async ({ session, token }) => {
       session.user = {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         id: token.id,
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         role: token.role,
       };
@@ -75,8 +73,6 @@ export const authOptions: NextAuthOptions = {
         email: { label: "Email", type: "text", placeholder: "jsmith" },
         password: { label: "Password", type: "password" },
       },
-      // ignore error eslint
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       authorize: async (credentials) => {
         const cred = await loginSchema.parseAsync(credentials);

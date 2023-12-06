@@ -6,7 +6,7 @@ import ProfileList from "~/components/ProfileList";
 import Header from "~/components/header";
 import Footer from "~/components/footer";
 
-const formlists: NextPage = () => {
+const Formlists: NextPage = () => {
   const session = useSession();
 
   return (
@@ -49,4 +49,4 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   return { props: {} };
 };
 
-export default formlists;
+export default Formlists;

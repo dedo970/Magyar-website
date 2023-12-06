@@ -4,6 +4,7 @@ import Up from "~/animations/up";
 import Header from "~/components/header";
 import Footer from "~/components/footer";
 import Image from "next/image";
+import Link from "next/link";
 
 
 
@@ -17,9 +18,9 @@ export default function Home() {
         <div>
           <h1 className="text-7xl font-extrabold title">Magyar</h1>
           <p className="title font-bold my-5 text-2xl">whitelisted Vanilla Server</p>
-          <a href="/form" className="">
+          <Link href="/form" className="">
             <button className=" prihlaska-kkt">Přihláška</button>
-            </a>
+            </Link>
             </div>
     </div>
     }
