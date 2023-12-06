@@ -19,6 +19,7 @@ import type { UserInfo, Field } from "~/types/hackathon.type";
 import Loading from "~/components/test/Loading";
 import router from "next/router";
 import Image from "next/image";
+import Link from "next/link";
 const steps = ["Basic Info","Question2","Question3","Question4", "More details", "Review"];
 
 
@@ -191,9 +192,9 @@ export default function FormScreen() {
             )
           ) : (
             <React.Fragment>
-              <a href="/">
+              <Link href="/">
               <Image alt="" src="/Hardmode-logo.png" className="w-16 mb-2"/>
-              </a>
+              </Link>
 
               {stepContent}
               <div className=" justify-between">
