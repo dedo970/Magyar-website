@@ -14,7 +14,7 @@ import ProfileView from "~/components/test/ProfileView";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
 import { api } from "~/utils/api";
-import { Error } from "~/types/hackathon.type";
+import {Error} from "~/types/hackathon.type";
 import type { UserInfo, Field } from "~/types/hackathon.type";
 import Loading from "~/components/test/Loading";
 import router from "next/router";
@@ -115,7 +115,7 @@ export default function FormScreen() {
     if (activeStep === 5) {
       handleFinish();
     }
-    if (!checkStepValidity(userInfo, activeStep, error, setError)) return;
+    if (!checkStepValidity(userInfo, activeStep,error, setError)) return;
     setActiveStep(activeStep + 1);
   }
 
@@ -178,7 +178,7 @@ export default function FormScreen() {
       default:
         throw new Error("Unknown step");
     }
-  }, [isSuccess, activeStep, userInfo, error, handleFormInputChange]);
+  }, [isSuccess, activeStep, userInfo,error, handleFormInputChange]);
 
   return (
     <>
@@ -193,7 +193,7 @@ export default function FormScreen() {
           ) : (
             <React.Fragment>
               <Link href="/">
-              <Image alt="" src="/Hardmode-logo.png" className="w-16 mb-2"/>
+              <Image alt="no photo" src="/Hardmode-logo.png" className="w-16 mb-2" width={44} height={44} />
               </Link>
 
               {stepContent}

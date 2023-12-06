@@ -54,7 +54,6 @@ function Post ({ frontmatter, content }) {
         <div className="top-bg">
           </div>
     <div className="flex justify-center ">
-          {/* <img className="logo" src="/Hardmode-logo.png" /> */}
           <div>
               <h1 className="text-5xl font-extrabold">{frontmatter.title}</h1>
               <Link href="/wiki" className="flex justify-center pt-6">

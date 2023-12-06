@@ -39,7 +39,6 @@ function Blog ( posts: { slug: any; frontmatter: any; }[] ) {
       <div className="top-bg">
       </div>
       <div className="flex justify-center text-center ">
-        {/* <img className="logo" src="/Hardmode-logo.png" /> */}
         <div>
           <h1 className="text-5xl font-extrabold">Wiki</h1>
           <p className="my-4 text-xl font-bold desc">Návody, rady a tipy</p>

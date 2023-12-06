@@ -58,6 +58,8 @@ const Header = () => {
                     className="h-11 w-auto"
                     src="/Hardmode-logo.png"
                     alt="Logo"
+                    width={44}
+                    height={44} 
                   />
                 </div>
                 </Link>
@@ -105,7 +107,7 @@ const Header = () => {
                             {session.status !== "authenticated" && (
         <div className="flex items-center space-x-3 font-bold text-gray-300 pr-1">
               <Link href="auth" className="account">
-                <Image alt="" src="https://api.enchant.cz/head/64/MHF_Steve" />
+                <Image alt="no photo" src="https://cravatar.eu/avatar/steve/64.png" width={44} height={44} />
                 <div className="nick">Prihlásiť sa</div></Link>
             </div>
         )}
@@ -123,6 +125,7 @@ const Header = () => {
                         className="h-9 w-9 rounded-full"
                         src={`https://cravatar.eu/avatar/${session.data?.user?.email}/64.png`}
                         alt=""
+                        width={44} height={44}
                       />
                     </Menu.Button>
                   </div>

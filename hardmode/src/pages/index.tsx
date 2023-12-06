@@ -14,7 +14,7 @@ export default function Home() {
     const isEvent = props.isEvent;
     if (isEvent === false) {
       return <div className="inner home-grid ">
-            <Image alt="" className="logo" src="/Hardmode-logo.png"/>
+            <Image alt="no photo" className="logo" src="/Hardmode-logo.png" width={44} height={44} />
         <div>
           <h1 className="text-7xl font-extrabold title">Magyar</h1>
           <p className="title font-bold my-5 text-2xl">whitelisted Vanilla Server</p>
@@ -26,7 +26,7 @@ export default function Home() {
     }
     return <div className="inner ">
       <Up>
-        <Image alt="" src="/Hardmode-logo.png" className=""/>
+        <Image alt="no photo" src="/Hardmode-logo.png" className="" width={44} height={44}  />
         </Up>
         <h1 className="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pb-10">text</h1>
 </div>;

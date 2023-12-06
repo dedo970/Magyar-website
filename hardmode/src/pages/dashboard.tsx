@@ -80,7 +80,7 @@ const Dashboard: NextPage = () => {
           )}
           <div className="flex items-center space-x-3">
               <div className="account">
-                <Image alt="" src={`https://cravatar.eu/avatar/${session.data?.user?.email}/64.png`} />
+                <Image width={44} height={44} alt="" src={`https://cravatar.eu/avatar/${session.data?.user?.email}/64.png`} />
 </div>
             </div>
           </div>
