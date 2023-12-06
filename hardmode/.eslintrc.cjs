@@ -16,9 +16,6 @@ const config = {
   rules: {
     // These opinionated rules are enabled in stylistic-type-checked above.
     // Feel free to reconfigure them to your own preference.
-    'no-unused-expressions': [2, { 'allowShortCircuit': true, 'allowTernary': true }],
-    "babel/no-unused-expressions": 1,
-
     "@typescript-eslint/consistent-type-imports": [
       "warn",
       {
@@ -26,7 +23,6 @@ const config = {
         fixStyle: "inline-type-imports",
       },
     ],
-    "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
   },
 };
 
