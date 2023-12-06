@@ -1,28 +1,21 @@
 import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
-import { signOut, useSession } from "next-auth/react";
-import * as skinview3d from "skinview3d";
+import {  useSession } from "next-auth/react";
+// import * as skinview3d from "skinview3d";
 import { api } from "~/utils/api";
 import { getServerAuthSession } from "~/server/auth";
-import { useEffect,useRef, useState } from "react";
+// import { useRef, useState } from "react";
 import CreateUser from "~/components/createUser";
-import {
-  ClientRoute,
-  ClientRouter,
-  ClientRouterProvider,
-} from "../utils/client-router";
-import Loading from "~/components/test/Loading";
-import ProfileList from "~/components/ProfileList";
 import Header from "~/components/header";
 import Footer from "~/components/footer";
+import Image from "next/image";
 
 const Dashboard: NextPage = () => {
   const session = useSession();
-  const [loading, setLoading] = useState<boolean>();
   const secret = api.protected.getSecretMessage.useQuery();
 
-  const [rerender, setRerender] = useState(false);
-  const ref = useRef(null)
+  // const [rerender, setRerender] = useState(false);
+  // const ref = useRef(null)
 //   function MyComponent() {
 //   useEffect(() => {
 //   const element = ref.current
@@ -87,7 +80,7 @@ const Dashboard: NextPage = () => {
           )}
           <div className="flex items-center space-x-3">
               <div className="account">
-                <img src={`https://cravatar.eu/avatar/${session.data?.user?.email}/64.png`} />
+                <Image alt="" src={`https://cravatar.eu/avatar/${session.data?.user?.email}/64.png`} />
 </div>
             </div>
           </div>

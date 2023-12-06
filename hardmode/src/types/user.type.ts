@@ -1,4 +1,4 @@
-export type THackathon = {
+export interface THackathon {
     id: string;
     username: string;
     email: string;

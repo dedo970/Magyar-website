@@ -1,10 +1,6 @@
 import React from "react";
 
-interface CopyProps {
-  text: string;
-}
-
-const Copy = (props: CopyProps) => {
+const Copy = () => {
   return <div>Copy</div>;
 };
 

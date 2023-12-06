@@ -1,16 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import * as React from "react";
 
 import {
   Container,
   Box,
-  Paper,
-  Stepper,
-  Step,
-  StepLabel,
-  Button,
-  Typography,
-  Stack,
 } from "@mui/material";
 
 import BasicInfoForm from "~/components/test/BasicInfoForm";
@@ -22,17 +14,12 @@ import ProfileView from "~/components/test/ProfileView";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
 import { api } from "~/utils/api";
-import { ClientLink } from "~/utils/client-router";
 import { Error } from "~/types/hackathon.type";
 import type { UserInfo, Field } from "~/types/hackathon.type";
 import Loading from "~/components/test/Loading";
-import CreateSuccess from "~/components/test/CreateSuccess";
-import router, { useRouter } from "next/router";
-import { useState } from "react";
-import { nanoid } from "nanoid";
-import {useEffect} from 'react';
+import router from "next/router";
+import Image from "next/image";
 const steps = ["Basic Info","Question2","Question3","Question4", "More details", "Review"];
-let dataId = nanoid(6);
 
 
 const checkStepValidity = (
@@ -98,7 +85,6 @@ export default function FormScreen() {
   );
 
   const {
-    data,
     mutate,
     isSuccess,
   }: {
@@ -146,7 +132,6 @@ export default function FormScreen() {
             handleChange={(field: Field, value: unknown) =>
               handleFormInputChange(field, value, 0)
             }
-            error={error}
           />
         );
       case 1:
@@ -156,7 +141,6 @@ export default function FormScreen() {
             handleChange={(field: Field, value: unknown) =>
               handleFormInputChange(field, value, 1)
             }
-            error={error}
           />
         );
         case 2:
@@ -166,7 +150,6 @@ export default function FormScreen() {
               handleChange={(field: Field, value: unknown) =>
                 handleFormInputChange(field, value, 1)
               }
-              error={error}
             />
           );
         case 3:
@@ -176,7 +159,6 @@ export default function FormScreen() {
               handleChange={(field: Field, value: unknown) =>
                 handleFormInputChange(field, value, 1)
               }
-              error={error}
             />
           );
         case 4:
@@ -186,11 +168,10 @@ export default function FormScreen() {
               handleChange={(field: Field, value: unknown) =>
                 handleFormInputChange(field, value, 1)
               }
-              error={error}
             />
           );
       case 5:
-        return <><ProfileView userInfo={userInfo} sx={{ mt: 2 }} /></>;
+        return <><ProfileView userInfo={userInfo} /></>;
       case 6:
         return isSuccess ? <div>Success</div> : <div>Saving ...</div>;
       default:
@@ -211,7 +192,7 @@ export default function FormScreen() {
           ) : (
             <React.Fragment>
               <a href="/">
-              <img src="/Hardmode-logo.png" className="w-16 mb-2"/>
+              <Image alt="" src="/Hardmode-logo.png" className="w-16 mb-2"/>
               </a>
 
               {stepContent}

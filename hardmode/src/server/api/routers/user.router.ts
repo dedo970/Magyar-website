@@ -1,11 +1,9 @@
-import { z } from "zod";
 import { createTRPCRouter } from "../trpc";
 import { publicProcedure } from "../trpc";
 // Schemas:
 import {
     newUser,
 } from "~/schema/user";
-import { UserRole } from "@prisma/client";
 
 export const UserProfile = createTRPCRouter({
 

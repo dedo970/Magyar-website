@@ -1,27 +1,19 @@
 import * as React from "react";
 import {
-  FormControl,
-  RadioGroup,
-  Radio,
   Grid,
   Typography,
-  TextField,
-  FormControlLabel,
-  FormLabel,
 } from "@mui/material";
 
 
 
-import type { UserInfo, Field, Error } from "~/types/hackathon.type";
+import type { UserInfo, Field } from "~/types/hackathon.type";
 
 export default function BasicInfoForm({
   userInfo,
   handleChange,
-  error,
 }: {
   userInfo: UserInfo;
   handleChange: (field: Field, value: unknown) => void;
-  error: Error;
 }) {
   return (
     <>

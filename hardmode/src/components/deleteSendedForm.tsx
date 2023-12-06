@@ -5,8 +5,7 @@ import { useRouter } from "next/router";
 
 import { toast } from "sonner";
 import { inputStyles } from "~/ui/input";
-import { Button, Modal } from "~/ui";
-import DeleteModal from "~/ui/deleteModal";
+import { Button } from "~/ui";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Cancel } from "~/ui/icons";
 
@@ -18,7 +17,7 @@ const DeleteHackathon = (props: DeleteHackathonProps) => {
   const router = useRouter();
   const [loading, setLoading] = useState<boolean>();
   const [open, setOpen] = useState(false);
-  const [randomWord, setRandomWord] = useState<string>(nanoid(6));
+  const [randomWord] = useState<string>(nanoid(6));
   const [validateInput, setValidateInput] = useState<string>("");
 
   const { mutate: deleteHackathon } = api.hackathon.deleteHackathon.useMutation(

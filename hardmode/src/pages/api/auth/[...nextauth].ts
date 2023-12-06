@@ -2,11 +2,9 @@ import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import {
-  getServerSession,
   type NextAuthOptions,
   type DefaultSession,
 } from "next-auth";
-import bcrypt from "bcryptjs";
 import { env } from "~/env.mjs";
 import { prisma } from "~/server/db";
 import { loginSchema } from "~/validation/auth";

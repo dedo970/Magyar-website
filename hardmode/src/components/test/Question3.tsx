@@ -1,15 +1,13 @@
 import * as React from "react";
-import { Grid, Typography, TextField } from "@mui/material";
-import type { UserInfo, Field, Error } from "~/types/hackathon.type";
+import { Grid, Typography } from "@mui/material";
+import type { UserInfo, Field } from "~/types/hackathon.type";
 
 export default function MoreDetailsForm({
   userInfo,
   handleChange,
-  error,
 }: {
   userInfo: UserInfo;
   handleChange: (field: Field, value: unknown) => void;
-  error: Error;
 }) {
   return (
     <>

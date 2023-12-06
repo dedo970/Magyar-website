@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import type { FC, ReactNode } from "react";
 
-type UpProps = {
+interface UpProps {
   children: ReactNode;
   delay?: number;
 };

@@ -1,20 +1,8 @@
 import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
-import { signOut, useSession } from "next-auth/react";
-import * as skinview3d from "skinview3d";
-import { api } from "~/utils/api";
+import { useSession } from "next-auth/react";
 import { getServerAuthSession } from "~/server/auth";
-import { useEffect,useRef, useState } from "react";
-import CreateUser from "~/components/createUser";
-
-import {
-  ClientRoute,
-  ClientRouter,
-  ClientRouterProvider,
-} from "../utils/client-router";
-import Loading from "~/components/test/Loading";
 import ProfileList from "~/components/ProfileList";
-import FormList from "~/components/ProfileList";
 import Header from "~/components/header";
 import Footer from "~/components/footer";
 

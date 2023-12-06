@@ -1,4 +1,4 @@
-export type THackathon = {
+export interface THackathon {
     id?: string;
     firstName: string;
     lastName: string;
@@ -9,7 +9,7 @@ export type THackathon = {
 
   };
 
-  export type ProfileRow = {
+  export interface ProfileRow {
     _id: string;
     firstName: string;
     lastName: string;
@@ -21,7 +21,7 @@ export type THackathon = {
     description: string;
   };
   
-  export type Error = {
+  export interface Error {
     firstName: boolean;
     lastName: boolean;
     location: boolean;

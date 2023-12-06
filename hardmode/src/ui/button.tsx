@@ -32,7 +32,7 @@ export const Button = (props: ButtonProps) => {
         props.wFull && "w-full",
       )}
       onClick={props.onClick}
-      disabled={props.disabled || props.loadingstatus}
+      disabled={props.disabled ?? props.loadingstatus}
       {...props}
     >
       <div className="flex items-center justify-center">
@@ -64,7 +64,7 @@ export const ButtonLg = (props: ButtonProps) => {
         props.className,
       )}
       onClick={props.onClick}
-      disabled={props.disabled || props.loadingstatus}
+      disabled={props.disabled ?? props.loadingstatus}
       {...props}
     >
       <div className="flex flex-col items-center justify-center">

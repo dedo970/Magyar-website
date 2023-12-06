@@ -1,11 +1,7 @@
-import { signOut, useSession, signIn } from "next-auth/react";
-import Image from "next/image";
+import { signOut, useSession } from "next-auth/react";
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import Up from "~/animations/up";
-import { Button, Link } from "~/ui";
+import {  Link } from "~/ui";
 import { toast } from "sonner";
-import { ClientRoute } from "~/utils/client-router";
-import type { User } from "next-auth"
 import { useScrollPosition } from "~/hooks/useScrollPosition";
 import { Fragment } from 'react'
 const navigation = [
@@ -16,6 +12,7 @@ const navigation = [
 
 
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import Image from "next/image";
 const Header = () => {
   const session = useSession();
   const handleLogout = async () => {
@@ -57,7 +54,7 @@ const Header = () => {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <Link href="/">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
+                  <Image
                     className="h-11 w-auto"
                     src="/Hardmode-logo.png"
                     alt="Logo"
@@ -108,7 +105,7 @@ const Header = () => {
                             {session.status !== "authenticated" && (
         <div className="flex items-center space-x-3 font-bold text-gray-300 pr-1">
               <Link href="auth" className="account">
-                <img src="https://api.enchant.cz/head/64/MHF_Steve" />
+                <Image alt="" src="https://api.enchant.cz/head/64/MHF_Steve" />
                 <div className="nick">Prihlásiť sa</div></Link>
             </div>
         )}
@@ -122,7 +119,7 @@ const Header = () => {
                       
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
-                      <img
+                      <Image
                         className="h-9 w-9 rounded-full"
                         src={`https://cravatar.eu/avatar/${session.data?.user?.email}/64.png`}
                         alt=""

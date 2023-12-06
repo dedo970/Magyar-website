@@ -1,18 +1,15 @@
-import { signIn, signOut, useSession } from "next-auth/react";
 import Head from "next/head";
-import Link from "next/link";
 import { useState, useEffect } from "react";
-import { api } from "~/utils/api";
-import Up from "~/animations/up";
 import Loading from "~/components/test/Loading";
 import Header from "~/components/header";
 import Footer from "~/components/footer";
+import Image from "next/image";
 
 // import data from './clenovia.json';
 
-export default function clenovia() {
+export default function Clenovia() {
 
-  type Clenovia = {
+  interface Clenovia {
     nick: string,
     date: string,
     uiid: string,
@@ -68,7 +65,7 @@ export default function clenovia() {
             <div className=" clenoviabg grid grid-cols-2 p-3 rounded-md shadow">
             {/* <img src={`https://cravatar.eu/avatar/${Chleba_}/64.png`} /> */}
             {/* <img className="rounded-md shadow" loading="lazy" src="https://cravatar.eu/avatar/Chleba_/64.png" /> */}
-            <img className="rounded-md shadow" loading="lazy" src={`https://minotar.net/helm/${item?.uiid}/64.png`} />
+            <Image alt="" className="rounded-md shadow" loading="lazy" src={`https://minotar.net/helm/${item?.uiid}/64.png`} />
             
             <div className="text-right">
             <h1 className="text-2xl font-bold">{item?.nick}</h1>

@@ -1,36 +1,12 @@
-import { useState } from "react";
 import Head from "next/head";
-import { signIn, signOut } from "next-auth/react";
-
-import { Button } from "~/ui";
-import { Github } from "~/ui/icons";
-import { toast } from "sonner";
-import Up from "~/animations/up";
-import { useSession } from "next-auth/react";
-import { useRouter } from "next/router";
-import React, { useEffect } from "react";
-import Link from 'next/link';
-import { FormEvent } from 'react';
-import { api } from "../../utils/api";
+import React from "react";
 import LoginForm from "~/components/LoginForm";
-import type { GetServerSideProps, NextPage } from "next";
+import type { GetServerSideProps } from "next";
 
 import { getServerAuthSession } from "~/server/auth";
 
-type TForm = {
-  username: string;
-  password: string;
-};
 
 const Auth: React.FC = () => {
-  const [userName, setUserName] = useState<string>("");
-  const [userPassword, setPassword] = useState<string>("");
-  const signIn = async (e: React.FormEvent) => {
-    
-    e.preventDefault();
-    console.log(e);
-  };
-
   return (
     <>
       <Head>

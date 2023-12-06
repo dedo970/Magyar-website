@@ -4,8 +4,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 
 import type { ILogin } from "~/validation/auth";
-import { Tip } from "~/ui";
-import Error from "~/ui/error";
+
 
 const LoginForm = () => {
   const router = useRouter();

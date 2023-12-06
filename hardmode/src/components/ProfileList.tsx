@@ -1,45 +1,10 @@
-import { useState } from "react";
 import Head from "next/head";
-import { signIn, signOut } from "next-auth/react";
-
-import type { SxProps } from "@mui/material";
-import {
-  TableContainer,
-  Paper,
-  Table,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableBody,
-} from "@mui/material";
 import UserViewModal from "../ui/UserViewModal"
-import { Button, Modal } from "~/ui";
-import { Github } from "~/ui/icons";
-import { toast } from "sonner";
-import Up from "~/animations/up";
-import { useSession } from "next-auth/react";
-import { useRouter } from "next/router";
-import React, { useEffect } from "react";
-import Link from 'next/link';
-import { FormEvent } from 'react';
+import React from "react";
 import { api } from "~/utils/api";
-import LoginForm from "~/components/LoginForm";
-import type { GetServerSideProps, NextPage } from "next";
-
-import { getServerAuthSession } from "~/server/auth";
-import ProfileList from "~/components/ProfileList";
 import type { THackathon } from "~/types/hackathon.type";
-import Loading from "~/components/test/Loading";
 import type { Hackathon } from "@prisma/client";
-import { ClientLink } from "~/utils/client-router";
-
-import { EmailTemplate } from '~/components/email/email-template';
-import { Resend } from 'resend';
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { NextResponse } from 'next/server';
 import DeleteHackathon from "./deleteSendedForm";
-import { Cancel } from "~/ui/icons";
-import * as Dialog from "@radix-ui/react-dialog";
 
 const FormList: React.FC = () => {
     const {

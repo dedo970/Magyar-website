@@ -25,11 +25,11 @@ interface RouteProps {
 export const ClientRoute = ({ Component, path }: RouteProps) => {
   const { route } = useContext(ClientRouterContext);
 
-  const pathScreen = path.split("/")[1] || path.split("/")[0];
+  const pathScreen = path.split("/")[1] ?? path.split("/")[0];
   const [routeScreen, routeParam] = route.split("/").slice(1);
 
   return routeScreen === pathScreen ? (
-    <Component param={routeParam || ""} />
+    <Component param={routeParam ?? ""} />
   ) : null;
 };
 
@@ -71,7 +71,7 @@ export const ClientRouter = ({
 
   useEffect(() => {
     syncWithUrl();
-    window.onhashchange = (e) => {
+    window.onhashchange = () => {
       syncWithUrl();
     };
     window.addEventListener("popstate", handlePopState);

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export type PostListItemProps = {
+export interface PostListItemProps {
     title: string;
     date: string;
     summary: string;

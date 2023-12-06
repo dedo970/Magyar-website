@@ -1,17 +1,11 @@
-import { Grid, Typography, Avatar } from "@mui/material";
+
 import type { SxProps } from "@mui/material";
 import type { UserInfo } from "~/types/hackathon.type";
-import Header from "../header";
-import * as Accordion from '@radix-ui/react-accordion';
-// import classNameNameNames from 'classNameNamenames';
-import { ChevronDownIcon } from '@radix-ui/react-icons';
 
 export default function ProfileView({
   userInfo,
-  sx,
 }: {
   userInfo: UserInfo;
-  sx: SxProps;
 }) {
   return (
     <>
