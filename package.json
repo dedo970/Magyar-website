@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "eslint": "^8.55.0",
+    "eslint-plugin-no-unused-expressions": "^0.1.0"
+  }
+}

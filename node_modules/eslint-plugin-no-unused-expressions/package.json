@@ -1,0 +1,23 @@
+{
+  "name": "eslint-plugin-no-unused-expressions",
+  "version": "0.1.0",
+  "description": "ESLint plugin to disallow unused expressions",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": {
+    "name": "Chris Clark",
+    "url": "github.com/clark800"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clark800/eslint-plugin-no-unused-expressions.git"
+  },
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "license": "ISC"
+}
