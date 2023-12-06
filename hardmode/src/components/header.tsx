@@ -174,12 +174,12 @@ const Header = () => {
                       )}
                       <Menu.Item>
                         {({ active }) => (
-                          <Link
+                          <button
                             onClick={() => signOut()}
                             className={classNames(active ? 'text-white' : '', 'block px-4 py-2 text-md font-bold text-gray-300 cursor-pointer')}
                           >
                             Sign out
-                          </Link>
+                          </button>
                         )}
                       </Menu.Item>
                     </Menu.Items>
