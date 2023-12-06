@@ -16,6 +16,8 @@ const config = {
     "@typescript-eslint/array-type": "off",
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/no-explicit-any": "off",
+    "no-unused-expressions": 0,
+    "babel/no-unused-expressions": 1,
 
     "@typescript-eslint/consistent-type-imports": [
       "warn",
