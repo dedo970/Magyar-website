@@ -164,7 +164,7 @@ const CreateUser = () => {
           {errors.uiid && <Alert>{errors.uiid?.message}</Alert>}
         </div>
 
-        <div className="mb-6">
+        {/* <div className="mb-6">
           <label htmlFor="name">role:</label>
           <select
             id="name"
@@ -186,7 +186,7 @@ const CreateUser = () => {
   <option value="User">User</option>
 </select>
           {errors.role && ""}
-        </div>
+        </div> */}
 
 
         <div className="flex flex-row-reverse">

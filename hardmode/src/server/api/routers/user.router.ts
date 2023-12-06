@@ -5,6 +5,7 @@ import { publicProcedure } from "../trpc";
 import {
     newUser,
 } from "~/schema/user";
+import { UserRole } from "@prisma/client";
 
 export const UserProfile = createTRPCRouter({
 
@@ -26,6 +27,7 @@ export const UserProfile = createTRPCRouter({
       const newUserProfile = ctx.prisma.user.create({
         data: {
           ...input,
+          
         },
       });
       return newUserProfile;

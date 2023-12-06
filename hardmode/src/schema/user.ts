@@ -10,7 +10,6 @@ export const newUser = z.object({
   password: z.string(),
   image: z.string(),
   uiid: z.string(),
-  role: z.string(),
 });
 
 export type newUser = z.TypeOf<typeof newUser>;
