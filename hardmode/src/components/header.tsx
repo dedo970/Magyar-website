@@ -3,6 +3,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import {  Link } from "~/ui";
 import { toast } from "sonner";
 import { useScrollPosition } from "~/hooks/useScrollPosition";
+import Script from 'next/script'  
 import { Fragment, JSXElementConstructor, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useEffect, useState } from 'react'
 const navigation = [
   // { name: 'Wiki', href: '/wiki', current: false },
@@ -43,7 +44,7 @@ const Header = () => {
   return (
     <>
       <Head>
-      <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
+      <script async src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
       </Head>
     <Disclosure as="nav" className={classNames(scrollPosition > 0 ? 'headerbg transition-all fixed z-50 headerShadow' : ' max-[650px]:bg-darkGray  ', "z-50 fixed top-0 transition-all w-full py-2  px-10 " )}>
       {({ open }) => (
