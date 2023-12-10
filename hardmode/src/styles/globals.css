@@ -1112,3 +1112,11 @@ li {
 }
 
 
+@media screen and (max-width: 800px) {
+    body {
+        font-size:18px
+    }
+    li {
+        font-size: 16.5px;
+    }
+}
