@@ -38,32 +38,6 @@ const Header = () => {
   const scrollPosition = useScrollPosition()
 
 
-//   const requestOptions = {
-//     method: 'POST',
-//     headers: { 'Content-Type': 'application/json' },
-//     body: JSON.stringify({ title: 'React POST Request Example' })
-// };
-
-  const [data,setData]=useState(null);
-  const [loading, setLoading] = useState(false);
-  const getData=()=>{
-    fetch("https://api.mcstatus.io/v2/status/java/demo.mcstatus.io"
-    )
-    .then(response => response.json())
-    .then(result => setData(result))
-    .catch(error => console.error('Error fetching data:', error));
-  }
-  useEffect(()=>{
-    getData()
-  },[])
-  
-  
-  // console.log(JSON.stringify(data))
-
-
-
-
-
 
   return (
     <>
@@ -213,11 +187,8 @@ const Header = () => {
                                 >
                                   Sign out
                                 </button>
-                                {
-       data && data.length>0 && data.map((item: { host: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; })=><p>{item.host}</p>)
-     }
-                                
-                                
+
+                                    
                                 </>
                         )}
                       </Menu.Item>

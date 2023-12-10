@@ -68,19 +68,10 @@ let data = Array.from(APIdata)
 <div className="dark-zone">
             <div className="inner text-center">
             {
-    data.map((dataObj) => {
+    data.map((dataObj, index) => {
         return(
-            <div
-              style={{
-                width: "15em",
-                backgroundColor: "#CD8FFD",
-                padding: 2,
-                borderRadius: 10,
-                marginBlock: 10,
-              }}
-            >
-              <p style={{ fontSize: 20, color: 'white' }}>{dataObj.players }</p>
-            </div>
+
+              <p key={index}style={{ fontSize: 20, color: 'white' }}>{dataObj.players }</p>
             )
   })
 }
