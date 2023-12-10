@@ -160,7 +160,7 @@ const Header = () => {
                       <Menu.Item>
                         {({ active }) => (
                           <Link
-                            href="https://85.13.106.109:43043/#world;flat;-252,64,82;1"
+                            href="http://85.13.106.109:43043/#world;flat;-252,64,82;1"
                             className={classNames(active ? 'text-white' : '', 'block px-4 py-2 text-md font-bold text-gray-300')}
                           >
                             Mapa
