@@ -28,7 +28,7 @@ let data = Array.from(APIdata)
     const isEvent = props.isEvent;
     if (isEvent === false) {
       return <div className="inner home-grid ">
-            <Image alt="no photo" className="logo" src="/Hardmode-logo.png" width={44} height={44} />
+            <img alt="no photo" className="logo" src="/Hardmode-logo.png" width={44} height={44} />
         <div>
           <h1 className="text-7xl font-extrabold title">Magyar</h1>
           <p className="title font-bold my-5 text-2xl">whitelisted Vanilla Server</p>

@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import { useScrollPosition } from "~/hooks/useScrollPosition";
 import { Fragment, JSXElementConstructor, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useEffect, useState } from 'react'
 const navigation = [
-  { name: 'Wiki', href: '/wiki', current: false },
+  // { name: 'Wiki', href: '/wiki', current: false },
   { name: 'Pravidlá', href: '/pravidla', current: false },
   { name: 'Členovia', href: '/clenovia', current: false },
 ]
@@ -114,7 +114,7 @@ const Header = () => {
                             {session.status !== "authenticated" && (
         <div className="flex items-center space-x-3 font-bold text-gray-300 pr-1">
               <Link href="auth" className="account">
-                <Image alt="no photo" src="https://cravatar.eu/avatar/steve/64.png" width={44} height={44} />
+                <Image alt="no photo" className="h-9 w-9 rounded-full" src="https://cravatar.eu/avatar/steve/64.png" width={44} height={44} />
                 <div className="nick">Prihlásiť sa</div></Link>
             </div>
         )}
@@ -160,7 +160,7 @@ const Header = () => {
                       <Menu.Item>
                         {({ active }) => (
                           <Link
-                            href="/dashboard"
+                            href="https://85.13.106.109:43043/#world;flat;-252,64,82;1"
                             className={classNames(active ? 'text-white' : '', 'block px-4 py-2 text-md font-bold text-gray-300')}
                           >
                             Mapa
