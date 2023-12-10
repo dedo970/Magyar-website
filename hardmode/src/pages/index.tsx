@@ -5,10 +5,24 @@ import Header from "~/components/header";
 import Footer from "~/components/footer";
 import Image from "next/image";
 import Link from "next/link";
-
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 
 export default function Home() {
+const url = "https://api.7games.ga/v1/players/?ip=ms9.hicoria.cloud:43045";
+const [APIdata, setData] = useState([]);
+
+useEffect(() => {
+   axios.get(url)
+   .then((response) => {
+     setData(response.data);
+})
+}, [])
+console.log(APIdata)
+let data = Array.from(APIdata)
+
+
 
   function Event(props: { isEvent: boolean; }) {
     const isEvent = props.isEvent;
@@ -53,7 +67,23 @@ export default function Home() {
             </div>
 <div className="dark-zone">
             <div className="inner text-center">
-      <h1>hello</h1>
+            {
+    data.map((dataObj) => {
+        return(
+            <div
+              style={{
+                width: "15em",
+                backgroundColor: "#CD8FFD",
+                padding: 2,
+                borderRadius: 10,
+                marginBlock: 10,
+              }}
+            >
+              <p style={{ fontSize: 20, color: 'white' }}>{dataObj.players }</p>
+            </div>
+            )
+  })
+}
       </div>
 
     </div>

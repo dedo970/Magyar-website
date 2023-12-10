@@ -3,12 +3,18 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import {  Link } from "~/ui";
 import { toast } from "sonner";
 import { useScrollPosition } from "~/hooks/useScrollPosition";
-import { Fragment } from 'react'
+import { Fragment, JSXElementConstructor, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useEffect, useState } from 'react'
 const navigation = [
   { name: 'Wiki', href: '/wiki', current: false },
   { name: 'Pravidlá', href: '/pravidla', current: false },
   { name: 'Členovia', href: '/clenovia', current: false },
 ]
+
+
+
+
+
+
 
 
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -30,6 +36,33 @@ const Header = () => {
   }
 
   const scrollPosition = useScrollPosition()
+
+
+//   const requestOptions = {
+//     method: 'POST',
+//     headers: { 'Content-Type': 'application/json' },
+//     body: JSON.stringify({ title: 'React POST Request Example' })
+// };
+
+  const [data,setData]=useState(null);
+  const [loading, setLoading] = useState(false);
+  const getData=()=>{
+    fetch("https://api.mcstatus.io/v2/status/java/demo.mcstatus.io"
+    )
+    .then(response => response.json())
+    .then(result => setData(result))
+    .catch(error => console.error('Error fetching data:', error));
+  }
+  useEffect(()=>{
+    getData()
+  },[])
+  
+  
+  // console.log(JSON.stringify(data))
+
+
+
+
 
 
   return (
@@ -174,12 +207,18 @@ const Header = () => {
                       )}
                       <Menu.Item>
                         {({ active }) => (
-                          <button
-                            onClick={() => signOut()}
-                            className={classNames(active ? 'text-white' : '', 'block px-4 py-2 text-md font-bold text-gray-300 cursor-pointer')}
-                          >
-                            Sign out
-                          </button>
+                          <><button
+                                  onClick={() => signOut()}
+                                  className={classNames(active ? 'text-white' : '', 'block px-4 py-2 text-md font-bold text-gray-300 cursor-pointer')}
+                                >
+                                  Sign out
+                                </button>
+                                {
+       data && data.length>0 && data.map((item: { host: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; })=><p>{item.host}</p>)
+     }
+                                
+                                
+                                </>
                         )}
                       </Menu.Item>
                     </Menu.Items>
