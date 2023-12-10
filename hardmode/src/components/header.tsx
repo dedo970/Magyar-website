@@ -19,6 +19,7 @@ const navigation = [
 
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from "next/image";
+import Head from "next/head";
 const Header = () => {
   const session = useSession();
   const handleLogout = async () => {
@@ -41,9 +42,13 @@ const Header = () => {
 
   return (
     <>
+      <Head>
+      <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
+      </Head>
     <Disclosure as="nav" className={classNames(scrollPosition > 0 ? 'headerbg transition-all fixed z-50 headerShadow' : ' max-[650px]:bg-darkGray  ', "z-50 fixed top-0 transition-all w-full py-2  px-10 " )}>
       {({ open }) => (
         <>
+        
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -102,13 +107,15 @@ const Header = () => {
 {session.status === "authenticated" && (
 <>
                 <div className="text-sm font-bold text-gray-300 pr-1">
-              0
+              
+                <span data-playercounter-ip="85.13.106.109:43045">0</span>
               </div>
 
               <span className="relative flex h-2 w-2">
   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
   <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
 </span>
+
 </>
 )}
                             {session.status !== "authenticated" && (
@@ -223,6 +230,7 @@ const Header = () => {
         </>
       )}
     </Disclosure>
+
       </>
   );
 };

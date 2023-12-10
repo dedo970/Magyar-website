@@ -10,17 +10,17 @@ import axios from "axios";
 
 
 export default function Home() {
-const url = "https://api.7games.ga/v1/players/?ip=ms9.hicoria.cloud:43045";
-const [APIdata, setData] = useState([]);
+// const url = "https://api.7games.ga/v1/players/?ip=ms9.hicoria.cloud:43045";
+// const [APIdata, setData] = useState([]);
 
-useEffect(() => {
-   axios.get(url)
-   .then((response) => {
-     setData(response.data);
-})
-}, [])
-console.log(APIdata)
-let data = Array.from(APIdata)
+// useEffect(() => {
+//    axios.get(url)
+//    .then((response) => {
+//      setData(response.data);
+// })
+// }, [])
+// console.log(APIdata)
+// let data = Array.from(APIdata)
 
 
 
@@ -76,7 +76,7 @@ let data = Array.from(APIdata)
   })
 } */}
       </div>
-
+      {/* <span data-playercounter-ip="85.13.106.109:43045">0</span> */}
     </div>
     <div className="inner text-center py-12">
       <h1 className="text-5xl font-bold title my-9">Pridaj sa k nám</h1>
@@ -99,6 +99,7 @@ let data = Array.from(APIdata)
     </div>
     </div>
     <Footer />
+    {/* <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script> */}
     </>
   );
 }
