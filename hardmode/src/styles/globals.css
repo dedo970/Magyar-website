@@ -1099,9 +1099,16 @@ li {
 }
 
 
+.text-blob {
+    margin: 20px auto;
+    max-width: 650px;
+}
 
 
-
-
+.ul-centered {
+    margin: auto;
+    max-width: 450px;
+    text-align: left;
+}
 
 

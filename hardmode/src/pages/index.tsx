@@ -80,13 +80,19 @@ let data = Array.from(APIdata)
     </div>
     <div className="inner text-center py-12">
       <h1 className="text-5xl font-bold title my-9">Pridaj sa k nám</h1>
-    <div className="invite my-6 mx-56">Budeme radi, ked sa pridáš k našej komunite a zapojíš sa do tvorenia našeho servera.</div>
-    <ul className="mx-auto w-96 " style={{ listStyleType: 'disc' }}>
-      <li className="invite w-fit">Adresa serveru: </li>
+    <div className="invite text-blob">Budeme radi, ked sa pridáš k našej komunite a zapojíš sa do tvorenia nášho servera.</div>
+   <div className="ul-centered">
+   <ul className="mx-2" style={{ listStyleType: 'disc' }}>
+      <li className="text-left invite">Adresa serveru: 
+      <a className="text-white font-semibold"> ms9.hicoria.cloud:43045</a>
+      </li>
 
-      <li className="invite w-fit">Discord serveru:       <a className="hover:underline-offset-1 text-white" href="https://discord.gg/dTa4A7rFGY">discord.magyar.sk</a></li>
+      <li className="text-left invite">Discord serveru:&nbsp;         
+      <a className="hover:underline text-white font-semibold " href="https://discord.gg/dTa4A7rFGY">discord.magyar.sk</a>
+      </li>
 
     </ul>
+    </div>
     </div>
       <div className="text-center">
 
