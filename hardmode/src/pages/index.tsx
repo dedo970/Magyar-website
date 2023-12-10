@@ -67,14 +67,14 @@ let data = Array.from(APIdata)
             </div>
 <div className="dark-zone">
             <div className="inner text-center">
-            {
+            {/* {
     data.map((dataObj, index) => {
         return(
 
               <p key={index}style={{ fontSize: 20, color: 'white' }}>{dataObj.players }</p>
             )
   })
-}
+} */}
       </div>
 
     </div>
