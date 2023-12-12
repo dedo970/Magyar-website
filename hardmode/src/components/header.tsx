@@ -78,6 +78,7 @@ const Header = () => {
                 </Link>
                 <div className=" hidden sm:ml-6 sm:block ">
                   <div className="flex space-x-4">
+                    
                     {navigation.map((item) => (
                       <Link
                         key={item.name}
@@ -90,16 +91,20 @@ const Header = () => {
                       >
                         {item.name}
                       </Link>
+                      
                     ))}
+
                   </div>
+                  
                 </div>
+                
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               {session.status !== "authenticated" && (
              
              
              
-              <Link href="https://discord.gg/dTa4A7rFGY" className="block px-4 py-2 text-md font-bold text-gray-300 cursor-pointer">
+              <Link href="https://discord.gg/dTa4A7rFGY" className="max-[650px]:hidden block px-4 py-2 text-md font-bold text-gray-300 cursor-pointer hover:text-white">
               Discord
               </Link>
               )}
@@ -123,7 +128,7 @@ const Header = () => {
         <div className="flex items-center space-x-3 font-bold text-gray-300 pr-1">
               <Link href="auth" className="account">
                 <Image alt="no photo" className="h-9 w-9 rounded-full" src="https://cravatar.eu/avatar/steve/64.png" width={44} height={44} />
-                <div className="nick">Prihlásiť sa</div></Link>
+                <div className="nick max-[650px]:hidden hover:text-white">Prihlásiť sa</div></Link>
             </div>
         )}
 
