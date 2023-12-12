@@ -11,6 +11,8 @@ const Auth: React.FC = () => {
     <>
       <Head>
         <title>Magyar</title>
+        <meta name="description" content="Whitelisted minecraft server" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex h-screen flex-col items-center justify-center">
         {/* <Up delay={0.2}>

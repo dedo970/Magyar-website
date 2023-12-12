@@ -52,7 +52,7 @@ const Dashboard: NextPage = () => {
     <> 
       <Head>
         <title>Magyar</title>
-        <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no Access-Control-Allow-Origin" name="description"  />
+        <meta content="Whitelisted minecraft server" name="description" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
