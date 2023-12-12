@@ -47,8 +47,8 @@ export default function pravidla() {
             <strong>Ostatní hráči</strong>
             <ul className="pl-12" style={{ listStyleType: 'disc' }}>
               <li>Griefing a krádeže v cudzích stavbách a ich okoliu (100 blockov) sú zakázané.</li>
-            <li>Zabíjenie ostatných hráčov je bez ich súhlasu "zakázáné".</li>
-            <li>Je "zakázané" nadávať ostatným hráčom alebo ich urážať.</li>
+            <li>Zabíjenie ostatných hráčov je bez ich súhlasu &quot;zakázáné&quot;.</li>
+            <li>Je &quot;zakázané&quot; nadávať ostatným hráčom alebo ich urážať.</li>
             </ul>
             
             <strong>Discord</strong>
