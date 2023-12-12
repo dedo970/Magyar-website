@@ -63,10 +63,26 @@ export default function Home() {
         </div>
         <div className="page">
           <div className="inner text-center">
-            <AuthShowcase />
+         <h2 className="text-5xl my-4 font-bold">Trocha nostalgie</h2>
+<p className="text-blob invite">Pokud patříš mezi opravdové Minecraftové veterány, určitě jsi v dobách beta verzí hrál na serverech. Možná si matně vzpomínáš, jaké to tenkrát bylo... Žádné residence, žádné pluginy, prostě jen čistý Minecraft.</p>
+
+<p className="text-blob invite">Tyto servery stály celé především na své komunitě hráčů, na jejich společných projektech a hlavně na jejich soužití v jednom kostičkovém světě.</p>
+
+<p className="text-blob invite">Nyní už znáš tento příběh. Tak se vrať v čase s námi!</p>
             </div>
 <div className="dark-zone">
             <div className="inner text-center">
+            <h2 className="text-5xl my-4 font-bold">V čom sme iný?</h2>
+            <div className="ul-centered">
+            <ul className="mx-2 " style={{ listStyleType: 'disc' }}>
+<p className="">Tu sú hlavné veci, v čom sa odlišujeme.</p>
+
+<li>Nemáme žiadne miesta, kde by sa &quot;nedalo ničiť&quot;.</li>
+<li>Sme komunita autistov, čo nemajú problém sa zabaviť.</li>
+<li>Na spawne je možné si postaviť obchod alebo varňu.</li>
+<li>Sme whitelisted - na server sa dostanú len tí, ktorí prejdú náborom.</li>
+</ul>
+</div>
             {/* {
     data.map((dataObj, index) => {
         return(
