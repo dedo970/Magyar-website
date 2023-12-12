@@ -66,13 +66,13 @@ export default function Home() {
          <h2 className="text-5xl my-4 font-bold">Trošku nostalgie</h2>
 <p className="text-blob invite">Pokiaľ patríš medzi Minecraftové legendy určite si spomínaš, aké to bolo... žiadne residencie, žiadne pluginy.</p>
 
-<p className="text-blob invite">Tieto serveri stály celé predovšetkým na komunite hráčov, na ich spoločných projektoch.</p>
+<p className="text-blob invite">Tieto serveri stáli celé predovšetkým na komunite hráčov, na ich spoločných projektoch.</p>
 
 <p className="text-blob invite">Tak staň sa minecraftu kráľ a buď maďarom. ❤️</p>
             </div>
 <div className="dark-zone">
             <div className="inner text-center">
-            <h2 className="text-5xl my-4 font-bold">V čom sme iný?</h2>
+            <h2 className="text-5xl my-4 font-bold">V čom sme iní?</h2>
             <div className="ul-centered">
             <ul className="mx-2 " style={{ listStyleType: 'disc' }}>
 <p className="">Tu sú hlavné veci, v čom sa odlišujeme.</p>
@@ -96,7 +96,7 @@ export default function Home() {
     </div>
     <div className="inner text-center py-12">
       <h1 className="text-5xl font-bold title my-9">Pridaj sa k nám</h1>
-    <div className="invite text-blob">Budeme radi, ked sa pridáš k našej komunite a zapojíš sa do tvorenia nášho servera.</div>
+    <div className="invite text-blob">Budeme radi, ked sa pridáš k našej komunite a zapojíš sa do tvorenia nášho serveru.</div>
    <div className="ul-centered">
    <ul className="mx-2 " style={{ listStyleType: 'disc' }}>
       <li className="">Adresa serveru: 
