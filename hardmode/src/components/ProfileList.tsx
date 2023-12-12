@@ -73,17 +73,17 @@ const FormList: React.FC = () => {
                 <h1>Hráči jsou na našem Discord serveru, abychom na sebe měli kontakt. Připoj se tam taky a níže napiš, jak se tam jmenuješ. (např. Lemon_CZE#1234)</h1>
                 <hr className="mb-2 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
   </div>
-                <p>{hackathon.description}</p>
+                <p>{hackathon.lastName}</p>
 <div>
                 <h1>Dále by nás zajímalo, jak jsi se o našem serveru dozvěděl/a.</h1>
                 <hr className="mb-2 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
                 </div>                
                 <p>{hackathon.location}</p>
 <div>
-                <h1>Proč sis vybral zrovna Enchant a co chceš na serveru dělat? Čím víc nás tvá zpráva zaujme, tím větší máš šanci na úspěch.</h1>
+                <h1>Proč sis vybral zrovna Magyar a co chceš na serveru dělat? Čím víc nás tvá zpráva zaujme, tím větší máš šanci na úspěch.</h1>
                 <hr className="mb-2 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
                 </div>
-                <p>{hackathon.team}</p>
+                <p>{hackathon.description}</p>
 
 <div>
                 <h1>Kolik je ti let?</h1>
