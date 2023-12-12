@@ -63,7 +63,7 @@ export default function Home() {
         </div>
         <div className="page">
           <div className="inner text-center">
-         <h2 className="text-5xl my-4 font-bold">Trocha nostalgie</h2>
+         <h2 className="text-5xl my-4 font-bold">Trošku nostalgie</h2>
 <p className="text-blob invite">Pokud patříš mezi opravdové Minecraftové veterány, určitě jsi v dobách beta verzí hrál na serverech. Možná si matně vzpomínáš, jaké to tenkrát bylo... Žádné residence, žádné pluginy, prostě jen čistý Minecraft.</p>
 
 <p className="text-blob invite">Tyto servery stály celé především na své komunitě hráčů, na jejich společných projektech a hlavně na jejich soužití v jednom kostičkovém světě.</p>
