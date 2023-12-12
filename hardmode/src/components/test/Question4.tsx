@@ -12,8 +12,8 @@ export default function MoreDetailsForm({
   return (
     <>
       <Typography variant="h6" gutterBottom className="text-xl font-semibold text-gray-300">
-      Prečo si si vybral zrovna Magyar a, čo chceš na servery robiť?
-	    Čím viac nás tvoja odpoveď zaujme, tým vetšiu máš šancu na úspech.
+      Prečo si si vybral zrovna Magyar a čo chceš na serveri robiť?
+	    Čím viac nás tvoja odpoveď zaujme, tým väčšiu máš šancu na úspech.
       </Typography>
       <Grid container spacing={3} sx={{ mt: -1 }}>
         <Grid item xs={12} sm={12}>
