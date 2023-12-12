@@ -18,7 +18,7 @@ export default function pravidla() {
           
           </div>
           <div className="inner text-center">
-          <h1 className="text-5xl font-extrabold">Pravidla</h1>
+          <h1 className="text-5xl font-extrabold">Pravidlá</h1>
           <p className="my-4 text-xl font-bold desc">Základne pravidlá servera, ktorými se riadia hráči</p>
             </div>
           
@@ -28,65 +28,40 @@ export default function pravidla() {
       <div className="page rules">
         <div className="inner" style={{maxWidth:"900px"}}>
           
-        <strong>Hraní na serveru</strong>
+        <strong>Hranie na serveru</strong>
         <ul className="pl-12" style={{ listStyleType: 'disc' }}>
-          <li>Na celém serveru je zakázáno používání 
-          <b>cheatů</b>, <b>hacků</b> a <b>zneužívání bugů</b>.
+          <li>Na celom serveri je zakázané použivanie 
+          <b>cheatov</b>, <b>hackov</b>.
           </li>
-          <li>Při nalezení chyby na serveru je hráč povinen ji nahlásit členům Admin Teamu.</li>
-          <li>Hráč nesmí zveřejňovat reklamu na věci, které se netýkají serveru.</li>
-          <li>Každý hráč smí hrát pouze za jeden účet.</li>
           </ul>
 
           <strong>Spawn</strong>
           <ul className="pl-12" style={{ listStyleType: 'disc' }}>
-            <li>Na nástěnku na Spawnu je možné umisťovat oznámení bez povolení.</li>
-          <li>V okolí Spawnu je <b>zakázáno stavět bez povolení</b>, o které se žádá u členů AT.</li>
-          <li>Vyhrazujeme si právo odstranit stavbu ze Spawnu po upozornění, pokud</li>
+            <li>Na nástenku na Spawne je možné umiestňovať oznámenie bez povolenia.</li>
+          <li>Vyhradzujeme si právo odstrániť stavbu zo Spawnu po upozornení, pokiaľ</li>
           <ul className="pl-12" style={{ listStyleType: 'circle' }}>
-            <li>je její majitel neaktivní déle než 1 rok nebo</li>
-          <li>v případě prázdného obchodu je jeho majitel neaktivní déle než 4 měsíce.</li>
+            <li>je jej majiteľ neaktivny dlhšie ako 1 rok alebo</li>
+          <li>v prípade prázdneho obchodu je jeho majiteľ neaktivny dlhšie než 4 mesiace.</li>
           </ul>
-          </ul>
-          
-          <strong>Hráčské stavby</strong>
-          <ul className="pl-12" style={{ listStyleType: 'disc' }}>
-            <li>Hráčskou stavbou je cokoliv postavené hráčem serveru z většího množství bloků.</li>
-            <li>Stavět je možné na libovolném místě, které se nachází dále než <b>500 bloků od jiných staveb</b> a dále než <b>1000 blocků od Spawnu</b>.</li>
-            <li>Na serveru je zakázáno stavět nevhodné stavby a vše, co by mohlo poškodit server.</li>
-            <li>Vyhrazujeme si právo odstranit hráčskou stavbu</li>
-            <ul className="pl-12" style={{ listStyleType: 'circle' }}>
-              <li>po upozornění, pokud je majitel neaktivní déle než 3 roky nebo</li>
-            <li><b>bez upozornění</b>, pokud se jedná o malou stavbu a majitel je neaktivní déle než 1 rok.</li>
-            </ul>
-            </ul>
-            
-            <strong>Příroda</strong>
-            <ul className="pl-12" style={{ listStyleType: 'disc' }}>
-              <li>Přírodou je myšleno vše, co se nachází dále než 100 bloků od hráčských staveb.</li>
-            <li>Každý hráč je vždy povinen <b>zachovat přírodu</b> takovou, jaká byla před jeho příchodem.</li>
-            <li>Těžba surovin je povolena, ale vždy je potřeba se maximálně snažit zachovat původní terén.</li>
-            <li>Přirozené stavby (vesnice, doly, ...) se nesmí ničit, není-li to potřeba kvůli hráčské stavbě.</li>
-            
-            </ul>
+          </ul> 
             <strong>Ostatní hráči</strong>
             <ul className="pl-12" style={{ listStyleType: 'disc' }}>
-              <li>Griefing a krádeže v cizích stavbách a jejich okolí (100 blocků) jsou přísně zakázány.</li>
-            <li>Zabíjení ostatních hráčů je bez jejich souhlasu zakázáno.</li>
-            <li>Je zakázáno nadávat ostatním hráčům nebo je urážet.</li>
+              <li>Griefing a krádeže v cudzích stavbách a ich okoliu (100 blockov) sú zakázané.</li>
+            <li>Zabíjenie ostatných hráčov je bez ich súhlasu "zakázáné".</li>
+            <li>Je "zakázané" nadávať ostatným hráčom alebo ich urážať.</li>
             </ul>
             
             <strong>Discord</strong>
             <ul className="pl-12" style={{ listStyleType: 'disc' }}>
-              <li>Každý člen serveru musí být připojen na našem Discord serveru.</li>
-            <li>Ve vlastním zájmu by měl mít každý člen nastavenou na Discord serveru přezdívku, kterou používá ve hře, aby jej bylo možné v případě potřeby kontaktovat.</li>
+              <li>Každý člen servera musí byť pripojený na našom Discord serveri.</li>
+            <li>Vo vlastnom záujme by mal mať každý člen nastavenú na Discorde prezývku, ktorú používa v hre, aby ho bolo možné v prípade potreby kontaktovať.</li>
             </ul>
             
             <strong>Admin Team</strong> (AT)
              <ul className="pl-12" style={{ listStyleType: 'disc' }}>
-              <li>Každý hráč je povinen poslechnout povely členů Admin Teamu.</li>
-            <li>V případě důležitého upozornění (odstranění stavby apod.) bude hráč upozorněn minimálně v měsíčním předstihu přímou zprávou na Discordu.</li>
-            <li>Vedení serveru si vyhrazuje všechna práva včetně rozhodování o členech na whitelistu.</li>
+              <li>Každý hráč je povinný poslúchať povely člena Admin Teamu, čiže mňa.</li>
+            <li>V prípade dôležitého upozornenia bude hráč upozornený ak na to nezabudnem.</li>
+            <li>Vedenie servera si vyhradzuje všetky práva aj o rozhodovaní o členoch na whiteliste.</li>
             </ul>
             </div>
             </div>
