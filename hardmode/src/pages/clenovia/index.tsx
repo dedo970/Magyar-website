@@ -55,7 +55,7 @@ export default function Clenovia() {
 
     <div className="inner text-center">
           <h1 className="text-5xl font-extrabold">Členovia</h1>
-          <p className="my-4 text-xl font-bold desc">Zoznam všetkych členov serveru</p>
+          <p className="my-4 text-xl font-bold desc">Zoznam všetkých členov serveru</p>
             </div>
         </div>
         {loading ? 
