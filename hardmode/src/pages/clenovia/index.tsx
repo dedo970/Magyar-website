@@ -59,16 +59,16 @@ export default function Clenovia() {
             </div>
         </div>
         {loading ? 
-        <div className="page py-12 grid lg:grid-cols-3 gap-4 max-w-screen-xl mx-auto md:grid-cols-2 sm:grid-cols-1 px-8">
+        <div className="page inner member-grid max-w-[1200px] m-auto py-10 px-6">
 
             {data.map((item: Clenovia) => 
-            <div key={item.nick} className=" clenoviabg grid grid-cols-2 p-3 rounded-md shadow">
+            <div key={item.nick} className=" clenoviabg">
             {/* <img src={`https://cravatar.eu/avatar/${Chleba_}/64.png`} /> */}
             {/* <img className="rounded-md shadow" loading="lazy" src="https://cravatar.eu/avatar/Chleba_/64.png" /> */}
             <Image alt="" className="rounded-md shadow" loading="lazy" width={66} height={66} src={`https://minotar.net/helm/${item?.uiid}/64.png`} />
             
             <div className="text-right">
-            <h1 className="text-2xl font-bold">{item?.nick}</h1>
+            <h1 className="text-2xl font-bold w-auto">{item?.nick}</h1>
             <h1 className="md:text-xl sm:text-md clenoviadisc">{item?.date}</h1>
             </div>
             </div>

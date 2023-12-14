@@ -1120,3 +1120,26 @@ li {
         font-size: 16.5px;
     }
 }
+
+.member-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr
+}
+
+.member-grid>* {
+    background: var(--c-bg-light);
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0005;
+    color: var(--c-text);
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    padding: 12px;
+    text-decoration: none!important
+}
+
+@media screen and (max-width: 900px) {
+    .member-grid {
+        grid-template-columns:1fr
+    }
+}
