@@ -59,7 +59,7 @@ export default function Clenovia() {
             </div>
         </div>
         {loading ? 
-        <div className="page py-12 grid lg:grid-cols-3 gap-4 max-w-screen-xl mx-auto md:grid-cols-2 sm:grid-cols-1 px-12">
+        <div className="page py-12 grid lg:grid-cols-3 gap-4 max-w-screen-xl mx-auto md:grid-cols-2 sm:grid-cols-1 px-8">
 
             {data.map((item: Clenovia) => 
             <div key={item.nick} className=" clenoviabg grid grid-cols-2 p-3 rounded-md shadow">
@@ -69,7 +69,7 @@ export default function Clenovia() {
             
             <div className="text-right">
             <h1 className="text-2xl font-bold">{item?.nick}</h1>
-            <h1 className="text-xl clenoviadisc">{item?.date}</h1>
+            <h1 className="md:text-xl sm:text-md clenoviadisc">{item?.date}</h1>
             </div>
             </div>
             )}
