@@ -8,7 +8,7 @@ await import("./src/env.mjs");
 const config = {
   reactStrictMode: true,
   images: {
-    domains: [ 'cravatar.eu', 'minotar.net'],
+    domains: [ 'cravatar.eu', 'minotar.net', 'mc-heads.net'],
   },
   /**
    * If you have `experimental: { appDir: true }` set, then you must comment the below `i18n` config

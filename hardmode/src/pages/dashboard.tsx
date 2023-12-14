@@ -56,23 +56,11 @@ const Dashboard: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-        <div className="mt-40 radius grid grid-cols-2 gap-4 items-center p-4">
+        <div className="mt-40 radius grid grid-cols-1 h-96 gap-4 items-center mb-60">
         {/* <canvas ref={ref}></canvas> */}
         {/* <MyComponent/> */}
-        <div className="border p-4">
-          <h1 className="text-lg">Dashboard - Protected</h1>
-          <p>{JSON.stringify(session)}</p>
-          <p>{session.data?.user?.email}</p>
-                    <p>{session.data?.user?.email}</p>
-          <p>{secret.data ? secret.data : "Loading tRPC query..."}</p>
-          {session.data?.user.role === "Admin" && (
-          <p>
-            <CreateUser/>
-            <div className=" text-center flex justify-center">
-              {/* <ProfileList/> */}
-              </div>
-            </p>
-          )}
+        <div className="flex justify-center text-6xl lg:text-7xl xl:text-8xl text-gray-200 tracking-wider font-bold">
+          Coming Soon
                     {session.data?.user.role === "User" && (
           <p>
             Uvedom sa lmao
@@ -80,7 +68,6 @@ const Dashboard: NextPage = () => {
           )}
           <div className="flex items-center space-x-3">
               <div className="account">
-                <Image width={44} height={44} alt="" src={`https://cravatar.eu/avatar/${session.data?.user?.email}/64.png`} />
 </div>
             </div>
           </div>

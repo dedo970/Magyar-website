@@ -141,11 +141,10 @@ const Header = () => {
                       
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
-                      <Image
+                      <img
                         className="h-9 w-9 rounded-full"
-                        src={`https://cravatar.eu/avatar/${session.data?.user?.email}/64.png`}
+                        src={`https://mc-heads.net/avatar/${session.data?.user?.image}`}
                         alt=""
-                        width={44} height={44}
                       />
                     </Menu.Button>
                   </div>
