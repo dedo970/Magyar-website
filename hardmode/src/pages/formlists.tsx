@@ -5,6 +5,7 @@ import { getServerAuthSession } from "~/server/auth";
 import ProfileList from "~/components/ProfileList";
 import Header from "~/components/header";
 import Footer from "~/components/footer";
+import Link from "next/link";
 
 const Formlists: NextPage = () => {
   const session = useSession();
@@ -22,6 +23,14 @@ const Formlists: NextPage = () => {
               <div className=" flex justify-center h-auto py-10 mt-5 ">
               <div className="my-auto text-center flex justify-center  ">
               <ProfileList/>
+
+              </div>
+              
+              </div>
+              <div className="text-center">
+              <Link href={"https://mcuuid.net/"}>minecraft uiid</Link>
+              <div>
+              <Link href={"https://https://supabase.com/"}>Supabase</Link>
               </div>
               </div>
               <Footer/>
