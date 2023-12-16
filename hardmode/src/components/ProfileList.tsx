@@ -41,13 +41,13 @@ const FormList: React.FC = () => {
         <title>Auth - Project Hackathon</title>
       </Head>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg my-auto top-0 bot-0 mt-14">
-      <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+      <table className="w-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
       <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
     <tr>
       <th scope="col" className="px-6 py-3">Nickname:</th>
       <th scope="col" className="px-6 py-3">Discord:</th>
       {/* <th scope="col" className="px-6 py-3">Year</th> */}
-      <th scope="col" className="px-6 py-3">VeK:</th>
+      <th scope="col" className="">VeK:</th>
       <th scope="col" className="px-6 py-3"></th>
     </tr>
   </thead>
@@ -61,7 +61,7 @@ const FormList: React.FC = () => {
                 <td align="left">{`${hackathon.firstName}`}</td>
                <td align="left">{`${hackathon.lastName}`}</td>
                 {/* <td align="left">{`${hackathon.description}`}</td> */}
-                <td align="left">{`${hackathon.team}`}</td>
+                <td className=" w-2" align="left">{`${hackathon.team}`}</td>
                 <UserViewModal key={hackathon.id} btn={<button className="text-white">View</button>}>
                           <div className="flex flex-col gap-6 w-auto">
                             <div>
@@ -94,6 +94,7 @@ const FormList: React.FC = () => {
                 </UserViewModal>
                 <DeleteHackathon id={hackathon.id} />
               </tr>
+              
             )}
           </tbody>
 </table>

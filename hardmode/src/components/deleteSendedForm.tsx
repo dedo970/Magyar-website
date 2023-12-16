@@ -25,7 +25,7 @@ const DeleteHackathon = (props: DeleteHackathonProps) => {
       onSuccess: () => {
         setLoading(false);
         setOpen(false);
-        router.push("/");
+        router.push("/formlists");
         toast.success("Hackathon deleted successfully");
       },
       onError: () => {

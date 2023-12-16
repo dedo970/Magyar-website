@@ -19,8 +19,8 @@ const Formlists: NextPage = () => {
         {session?.data?.user?.role === "Admin" && (
         <>
 <Header/>
-              <div className=" flex justify-center h-screen">
-              <div className="my-auto text-center flex justify-center">
+              <div className=" flex justify-center h-auto py-10 mt-5 ">
+              <div className="my-auto text-center flex justify-center  ">
               <ProfileList/>
               </div>
               </div>
