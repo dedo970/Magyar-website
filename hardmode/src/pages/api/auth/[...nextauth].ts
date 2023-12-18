@@ -51,6 +51,7 @@ export const authOptions: NextAuthOptions = {
       if (user) {
         token.id = user.id;
         token.role = user.role;
+        token.email = user.email;
       }
       return Promise.resolve(token);
     },
@@ -60,6 +61,8 @@ export const authOptions: NextAuthOptions = {
         id: token.id,
         // @ts-ignore
         role: token.role,
+        // @ts-ignore
+        email: token.email,
       };
       return Promise.resolve(session);
     },

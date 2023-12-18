@@ -143,7 +143,7 @@ const Header = () => {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-9 w-9 rounded-full"
-                        src={`https://mc-heads.net/avatar/${session.data?.user?.image}`}
+                        src={`https://mc-heads.net/avatar/${session.data?.user?.email}`}
                         alt=""
                       />
                     </Menu.Button>
@@ -234,7 +234,7 @@ const Header = () => {
           </Disclosure.Panel>
         </>
       )}
-    </Disclosure>
+    </Disclosure> 
 
       </>
   );
