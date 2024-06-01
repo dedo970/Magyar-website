@@ -21,4 +21,4 @@ Minecraft server website for server members.
 
 #### ER Diagram
 
-![PrismaSchema](/PrismaSchema.png)
+![PrismaSchema](https://github.com/dedo970/Magyar-website/blob/main/hardmode/public/PrismaSchema.png)
