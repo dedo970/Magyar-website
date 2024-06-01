@@ -4,13 +4,13 @@ Minecraft server website for server members.
 
 ## Technologies
 
-- [Next.js]
-- [NextAuth.js]
-- [Prisma]
-- [Tailwind CSS]
-- [tRPC]
-- [Typescript]
-- [React]
+- <strong>Next.js</strong>
+- <strong>NextAuth.js</strong>
+- <strong>Prisma</strong>
+- <strong>Tailwind CSS</strong>
+- <strong>tRPC</strong>
+- <strong>Typescript</strong>
+- <strong>React</strong>
 
 ## Features
 
