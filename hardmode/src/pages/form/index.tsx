@@ -31,19 +31,19 @@ const checkStepValidity = (
 ) => {
   const newError: Error = {} as Error;
   if (step === 0) {
-    newError.firstName = !userInfo.firstName;
+    newError.nickname = !userInfo.nickname;
   }
   if (step === 1) {
-    newError.lastName = !userInfo.lastName;
+    newError.discord = !userInfo.discord;
   }
   if (step === 2) {
-    newError.location = !userInfo.location;
-  }
-  if (step === 3) {
     newError.description = !userInfo.description;
   }
+  if (step === 3) {
+    newError.userinterest = !userInfo.userinterest;
+  }
   if (step === 4) {
-    newError.team = !userInfo.team;
+    newError.age = !userInfo.age;
   }
   setError({ ...error, ...newError });
   for (const key of Object.keys(newError) as Iterable<Field>) {
@@ -53,25 +53,25 @@ const checkStepValidity = (
 };
 
 const initialErrorState = {
-  firstName: false,
-  lastName: false,
+  nickname: false,
+  discord: false,
   gender: false,
   dateOfBirth: false,
   sports: false,
-  team: false,
-  location: false,
+  age: false,
   description: false,
+  userinterest: false,
 };
 
 export default function FormScreen() {
   const [activeStep, setActiveStep] = React.useState<number>(0);
   const [userInfo, setUserInfo] = React.useState<UserInfo>({
     _id: "",
-    firstName: "",
-    lastName: "",
-    team: "",
-    location: "",
+    nickname: "",
+    discord: "",
+    age: "",
     description: "",
+    userinterest: "",
   });
   const [error, setError] = React.useState<Error>(initialErrorState);
   const [dirty, setDirty] = React.useState<boolean[]>([false, false]);

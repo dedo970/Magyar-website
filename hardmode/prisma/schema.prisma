@@ -43,28 +43,28 @@ enum UserRole {
 
 model Hackathon {
     id             String          @id @default(cuid())
-    firstName String
-    lastName String
+    nickname String
+    discord String
     description String
-    location String
-    team String
+    userinterest String
+    age String
     @@map(name: "hackathons")
 }
 
 model Form {
     id             String          @id @default(cuid())
-    firstName String
-    lastName String
+    nickname String
+    discord String
     description String
-    location String
+    userinterest String
     team String
     @@map(name: "Form")
 }
 
 model Profile {
     id             String          @id @default(cuid())
-    firstName String
-    lastName String
+    nickname String
+    discord String
     job String
     city String
     country String

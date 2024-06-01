@@ -27,8 +27,8 @@ export default function BasicInfoForm({
             required
             placeholder="Tvoje meno na Discorde"
             className="bg-transparent border-0 w-full outline-none text-2xl"
-            value={userInfo.lastName}
-            onChange={(e) => handleChange("lastName", e.target.value)}
+            value={userInfo.discord}
+            onChange={(e) => handleChange("discord", e.target.value)}
           />
         </Grid>
         </Grid>

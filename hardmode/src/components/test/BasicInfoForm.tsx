@@ -26,8 +26,8 @@ export default function BasicInfoForm({
             required
             placeholder="Zadaj svoj nick"
             className="bg-transparent border-0 outline-none text-2xl w-full"
-            value={userInfo.firstName}
-            onChange={(e) => handleChange("firstName", e.target.value)}
+            value={userInfo.nickname}
+            onChange={(e) => handleChange("nickname", e.target.value)}
           />
         </Grid>
         </Grid>

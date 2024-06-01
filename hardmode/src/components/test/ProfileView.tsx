@@ -26,7 +26,7 @@ export default function ProfileView({
                         <span className="text-lg text-blue-600 font-bold">Začnime od začiatku. Akú prezývku používaš v Minecrafte?</span>
                     </div>
                     <div className="flex items-center py-2 ">
-                        <span className="text-gray-500">{userInfo.firstName} </span>
+                        <span className="text-gray-500">{userInfo.nickname} </span>
 
                     </div>
                 </div>
@@ -46,7 +46,7 @@ export default function ProfileView({
                         <span className="text-lg text-blue-600 font-bold">  Hráči sú na našom Discorde, aby sme na seba mali kontakt. Pripoj sa tam tiež a nižšie napíš, ako sa tam voláš. (napr. dedulo)</span>
                     </div>
                     <div className="flex items-center py-2">
-                        <span className="text-gray-500">{userInfo.lastName}</span>
+                        <span className="text-gray-500">{userInfo.discord}</span>
 
                     </div>
                 </div>
@@ -66,7 +66,7 @@ export default function ProfileView({
                         <span className="text-lg text-blue-600 font-bold">Ďalej by nás zaujímalo, ako si sa o našom servery dozvedel/a.</span>
                     </div>
                     <div className="flex items-center py-2">
-                        <span className="text-gray-500">{userInfo.location}</span>
+                        <span className="text-gray-500">{userInfo.description}</span>
 
                     </div>
                 </div>
@@ -86,7 +86,7 @@ export default function ProfileView({
                         <span className="text-lg text-blue-600 font-bold">      Prečo si si vybral zrovna Magyar a, čo chceš na servery robiť? Čím viac nás tvoja odpoveď zaujme, tým vetšiu máš šancu na úspech.</span>
                     </div>
                     <div className="flex items-center py-2">
-                        <span className="text-gray-500">{userInfo.description}</span>
+                        <span className="text-gray-500">{userInfo.userinterest}</span>
 
                     </div>
                 </div>
@@ -106,7 +106,7 @@ export default function ProfileView({
                         <span className="text-lg text-blue-600 font-bold">Koľko máš rokov?</span>
                     </div>
                     <div className="flex items-center py-2">
-                        <span className="text-gray-500">{userInfo.team}</span>
+                        <span className="text-gray-500">{userInfo.age}</span>
 
                     </div>
                 </div>

@@ -34,7 +34,7 @@ export default function ProfileView({
           align="right"
           sx={{ fontStyle: "italic", mt: 1 }}
         >
-          {`${userInfo.firstName} ${userInfo.lastName}`}
+          {`${userInfo.nickname} ${userInfo.discord}`}
         </Typography>
       </Grid>
       <Grid
@@ -60,7 +60,7 @@ export default function ProfileView({
           </Typography>
         </Grid>
         <Grid item xs={12} sm={8} sx={{ mt: 0.5 }}>
-          <Typography>{`${userInfo.location}`}</Typography>
+          <Typography>{`${userInfo.description}`}</Typography>
         </Grid>
         <Grid item xs={12} sm={4}>
           <Typography variant="h6" align="right">

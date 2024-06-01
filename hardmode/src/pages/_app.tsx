@@ -4,13 +4,15 @@ import { type AppType } from "next/app";
 import { api } from "~/utils/api";
 import "~/styles/globals.css";
 import Head from "next/head";
+import {
+  ChakraBaseProvider,
+} from '@chakra-ui/react'
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
   pageProps: { session, ...pageProps },
 }) => {
-  return (
-
+  return (  
     <SessionProvider session={session}>
             <Head>
         <title>Magyar</title>
@@ -18,6 +20,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
+      
     </SessionProvider>
     
   );

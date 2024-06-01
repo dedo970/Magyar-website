@@ -1,37 +1,37 @@
 export type THackathon = {
     id?: string;
-    firstName: string;
-    lastName: string;
+    nickname: string;
+    discord: string;
     country: string;
-    location: string;
-    team: string;
     description: string;
+    age: string;
+    userinterest: string;
   }
 
   export type ProfileRow = {
     _id: string;
-    firstName: string;
-    lastName: string;
+    nickname: string;
+    discord: string;
   }
   
   export type UserInfo = ProfileRow & {
-    location: string;
-    team: string;
     description: string;
+    age: string;
+    userinterest: string;
   }
   
   export type Error = {
-    firstName: boolean;
-    lastName: boolean;
-    location: boolean;
-    team: boolean;
+    nickname: boolean;
+    discord: boolean;
     description: boolean;
+    age: boolean;
+    userinterest: boolean;
   }
   
   export type Field =
-    | "firstName"
-    | "lastName"
-    | "location"
-    | "team"
-    | "description";
+    | "nickname"
+    | "discord"
+    | "description"
+    | "age"
+    | "userinterest";
   

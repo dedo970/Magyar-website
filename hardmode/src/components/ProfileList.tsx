@@ -58,38 +58,38 @@ const FormList: React.FC = () => {
               className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
                 key={hackathon.id}
               >
-                <td align="left">{`${hackathon.firstName}`}</td>
-               <td align="left">{`${hackathon.lastName}`}</td>
+                <td align="left">{`${hackathon.nickname}`}</td>
+               <td align="left">{`${hackathon.discord}`}</td>
                 {/* <td align="left">{`${hackathon.description}`}</td> */}
-                <td className=" w-2" align="left">{`${hackathon.team}`}</td>
+                <td className=" w-2" align="left">{`${hackathon.age}`}</td>
                 <UserViewModal key={hackathon.id} btn={<button className="text-white">View</button>}>
                           <div className="flex flex-col gap-6 w-auto">
                             <div>
                           <h1>Začneme od začátku. Jakou přezdívku používáš v Minecraftu?</h1>
                           <hr className="mb-2 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
   </div>
-                <p>{hackathon.firstName}  {hackathon.lastName}</p>
+                <p>{hackathon.nickname}  {hackathon.discord}</p>
                 <div>
                 <h1>Hráči jsou na našem Discord serveru, abychom na sebe měli kontakt. Připoj se tam taky a níže napiš, jak se tam jmenuješ. (např. Lemon_CZE#1234)</h1>
                 <hr className="mb-2 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
   </div>
-                <p>{hackathon.lastName}</p>
+                <p>{hackathon.discord}</p>
 <div>
                 <h1>Dále by nás zajímalo, jak jsi se o našem serveru dozvěděl/a.</h1>
                 <hr className="mb-2 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
                 </div>                
-                <p>{hackathon.location}</p>
+                <p>{hackathon.description}</p>
 <div>
                 <h1>Proč sis vybral zrovna Magyar a co chceš na serveru dělat? Čím víc nás tvá zpráva zaujme, tím větší máš šanci na úspěch.</h1>
                 <hr className="mb-2 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
                 </div>
-                <p>{hackathon.description}</p>
+                <p>{hackathon.userinterest}</p>
 
 <div>
                 <h1>Kolik je ti let?</h1>
                 <hr className="mb-2 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
                 </div>
-                <p>{hackathon.team}</p>
+                <p>{hackathon.age}</p>
                 </div>
                 </UserViewModal>
                 <DeleteHackathon id={hackathon.id} />

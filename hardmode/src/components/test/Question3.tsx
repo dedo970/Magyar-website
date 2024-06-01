@@ -20,8 +20,8 @@ export default function MoreDetailsForm({
             required
             placeholder="Napíš svoju odpoveď sem"
             className="bg-transparent border-0 w-screen max-w-xl outline-none text-2xl"
-            value={userInfo.location}
-            onChange={(e) => handleChange("location", e.target.value)}
+            value={userInfo.description}
+            onChange={(e) => handleChange("description", e.target.value)}
           />
         </Grid>
       </Grid>
