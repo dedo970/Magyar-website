@@ -68,7 +68,7 @@ export default function ProfileView({
           </Typography>
         </Grid>
         <Grid item xs={12} sm={8} sx={{ mt: 0.5 }}>
-          <Typography>{`${userInfo.team}`}</Typography>
+          <Typography>{`${userInfo.age}`}</Typography>
         </Grid>
         <Grid item xs={12} sm={4}>
           <Typography variant="h6" align="right">
