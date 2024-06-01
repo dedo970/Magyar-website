@@ -10,8 +10,6 @@ import Header from "~/components/header";
 import Footer from "~/components/footer";
 import dynamic from "next/dynamic";
 import { useState } from "react";
-import { Brewing } from "~/components/drawer/Brewing";
-import { Crafting } from "~/components/drawer/Crafting";
 
 const CodeSampleModal = dynamic(() => import('react-skinview3d'), {
   ssr: false,
@@ -98,8 +96,6 @@ const onSwitch = () => {
       height="300"
       width="300"
     />
-    <Brewing/>
-    <Crafting/>
     {/* <button onClick={onSwitch} className="rounded-2xl border-b-2 border-b-gray-600 clenoviabg mx-2 px-3 py-2 font-bold  ring-2 ring-gray-600 active:translate-y-[0.125rem] active:border-b-gray-500"><Image alt="" width={30} height={30} src={"/bottle.png"}/></button> */}
     {/* <button className="rounded-2xl border-b-2 border-b-gray-600 clenoviabg mx-2 px-3 py-2 font-bold  ring-2 ring-gray-600 active:translate-y-[0.125rem] active:border-b-gray-500"><Image alt="" width={30} height={30} src={"/bottle.png"}/></button> */}
     {/* <button className="rounded-2xl border-b-2 border-b-gray-600 clenoviabg mx-2 px-3 py-2 font-bold  ring-2 ring-gray-600 active:translate-y-[0.125rem] active:border-b-gray-500"><Image alt="" width={30} height={30} src={"/bottle.png"}/></button> */}
