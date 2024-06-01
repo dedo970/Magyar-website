@@ -1,3 +1,5 @@
+![PrismaSchema](https://github.com/dedo970/Magyar-website/blob/main/hardmode/public/HeroImage.png)
+
 # Magyar
 
 Minecraft server website for server members.
